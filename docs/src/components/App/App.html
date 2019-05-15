@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>App.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="App.html">
+                  src/components/App/App.js
+                </a>
+              
+                
+                <a class="source" href="ErrorBoundary.html">
+                  src/components/App/ErrorBoundary.js
+                </a>
+              
+                
+                <a class="source" href="i18n.html">
+                  src/components/App/i18n.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/Auth.html">
+                  src/components/Auth/Auth.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthActions.html">
+                  src/components/Auth/AuthActions.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthReducer.html">
+                  src/components/Auth/AuthReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Button/Button.html">
+                  src/components/Button/Button.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/Cat.html">
+                  src/components/Cat/Cat.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/CatActions.html">
+                  src/components/Cat/CatActions.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/CatReducer.html">
+                  src/components/Cat/CatReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/fulltilt.html">
+                  src/components/Cat/fulltilt.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/Connection.html">
+                  src/components/Connection/Connection.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionActions.html">
+                  src/components/Connection/ConnectionActions.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionReducer.html">
+                  src/components/Connection/ConnectionReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/messages.html">
+                  src/components/Connection/messages.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/Intro.html">
+                  src/components/Intro/Intro.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/IntroActions.html">
+                  src/components/Intro/IntroActions.js
+                </a>
+              
+                
+                <a class="source" href="../Particles/Particles.html">
+                  src/components/Particles/Particles.js
+                </a>
+              
+                
+                <a class="source" href="../Pulse/Pulse.html">
+                  src/components/Pulse/Pulse.js
+                </a>
+              
+                
+                <a class="source" href="../Router/Router.html">
+                  src/components/Router/Router.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/CatSound.html">
+                  src/components/Sound/CatSound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Mute.html">
+                  src/components/Sound/Mute.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Sound.html">
+                  src/components/Sound/Sound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/TurningSound.html">
+                  src/components/Sound/TurningSound.js
+                </a>
+              
+                
+                <a class="source" href="../Spinner/Spinner.html">
+                  src/components/Spinner/Spinner.js
+                </a>
+              
+                
+                <a class="source" href="../Typing/Typing.html">
+                  src/components/Typing/Typing.js
+                </a>
+              
+                
+                <a class="source" href="../../configureStore.html">
+                  src/configureStore.js
+                </a>
+              
+                
+                <a class="source" href="../../index.html">
+                  src/index.js
+                </a>
+              
+                
+                <a class="source" href="../../serviceWorker.html">
+                  src/serviceWorker.js
+                </a>
+              
+                
+                <a class="source" href="../../setupTests.html">
+                  src/setupTests.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>App.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>App</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">import</span> React, { memo } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
+
+<span class="hljs-keyword">import</span> { withTranslation } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-i18next'</span>;
+<span class="hljs-keyword">import</span> log <span class="hljs-keyword">from</span> <span class="hljs-string">'loglevel'</span>;
+
+<span class="hljs-keyword">import</span> Particles <span class="hljs-keyword">from</span> <span class="hljs-string">'../Particles/Particles.js'</span>;
+<span class="hljs-keyword">import</span> Router <span class="hljs-keyword">from</span> <span class="hljs-string">'../Router/Router.js'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./i18n.js'</span>;
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">'./bootstrap.scss'</span>;
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./App.module.scss'</span>;
+
+log.setDefaultLevel(process.env.REACT_APP_LOG_LEVEL);
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params">{ t }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{styles.main}</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Particles</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{</span>`${<span class="hljs-attr">styles.logo</span>} <span class="hljs-attr">text-center</span>`}&gt;</span>{t('app_name')}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"container-fluid"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Router</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+App.propTypes = {
+  <span class="hljs-attr">t</span>: PropTypes.func.isRequired
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> memo(withTranslation()(App));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+////
+//// Spinner styles
+////
+
+@import 'base.scss';
+
+.main.main {
+  color: lighten($button-text-color-disabled, 15%);
+  display: inline-block;
+  right: rem(-10);
+  top: rem(2);
+}

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Intro should display a continue button 1`] = `
+<div>
+  <h2
+    class="description"
+  >
+    app_description
+  </h2>
+  <button
+    class="main waves-effect waves-light"
+    type="button"
+  >
+    get_started
+  </button>
+</div>
+`;

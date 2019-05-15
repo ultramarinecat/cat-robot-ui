@@ -1,0 +1,32 @@
+////
+//// Variables
+////
+
+// fonts
+$main-font: 'Raleway', sans-serif;
+$logo-font: $main-font;
+
+// colors
+// https://www.google.com/design/spec/style/color.html#color-color-palette
+$indigo-500: #3f51b5;
+$indigo-400: #5c6bc0;
+$indigo-100: #c5cae9;
+$blue-100: #bbdefb;
+$white: #fff;
+
+$text-color: darken($white, 6%); // scss-lint:disable ColorVariable
+$validation-text-color: $indigo-100;
+
+// layout
+$full-viewport-height: 100vh;
+$full-viewport-width: 100vw;
+
+$full-parent-height: 100%;
+$full-parent-width: 100%;
+
+$half-parent-height: 50%;
+$half-parent-width: 50%;
+
+// misc
+$selection-background-color: $blue-100;
+$button-text-color-disabled: darken($text-color, 25%);

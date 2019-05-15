@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+////
+//// Router styles
+////
+/* stylelint-disable no-descending-specificity */
+
+@import 'base.scss';
+
+$enterDuration: 750ms;
+$exitDuration: 75ms;
+$timingFunction: ease-in-out;
+$opacity-transparent: 0;
+$opacity-opaque: 1;
+
+:global(.fade-enter) {
+  opacity: $opacity-transparent;
+  z-index: 1;
+}
+
+:global(.fade-enter.fade-enter-active) {
+  opacity: $opacity-opaque;
+  transition: opacity $enterDuration $timingFunction;
+}
+
+:global(.fade-exit) {
+  position: absolute;
+  top: $half-parent-height;
+  left: $half-parent-width;
+  transform: translate(-$half-parent-width, -$half-parent-height);
+  width: $full-parent-width;
+  opacity: $opacity-opaque;
+}
+
+:global(.fade-exit.fade-exit-active) {
+  opacity: $opacity-transparent;
+  z-index: 1;
+  transition: opacity $exitDuration $timingFunction;
+}

@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>fulltilt.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="../App/App.html">
+                  src/components/App/App.js
+                </a>
+              
+                
+                <a class="source" href="../App/ErrorBoundary.html">
+                  src/components/App/ErrorBoundary.js
+                </a>
+              
+                
+                <a class="source" href="../App/i18n.html">
+                  src/components/App/i18n.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/Auth.html">
+                  src/components/Auth/Auth.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthActions.html">
+                  src/components/Auth/AuthActions.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthReducer.html">
+                  src/components/Auth/AuthReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Button/Button.html">
+                  src/components/Button/Button.js
+                </a>
+              
+                
+                <a class="source" href="Cat.html">
+                  src/components/Cat/Cat.js
+                </a>
+              
+                
+                <a class="source" href="CatActions.html">
+                  src/components/Cat/CatActions.js
+                </a>
+              
+                
+                <a class="source" href="CatReducer.html">
+                  src/components/Cat/CatReducer.js
+                </a>
+              
+                
+                <a class="source" href="fulltilt.html">
+                  src/components/Cat/fulltilt.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/Connection.html">
+                  src/components/Connection/Connection.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionActions.html">
+                  src/components/Connection/ConnectionActions.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionReducer.html">
+                  src/components/Connection/ConnectionReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/messages.html">
+                  src/components/Connection/messages.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/Intro.html">
+                  src/components/Intro/Intro.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/IntroActions.html">
+                  src/components/Intro/IntroActions.js
+                </a>
+              
+                
+                <a class="source" href="../Particles/Particles.html">
+                  src/components/Particles/Particles.js
+                </a>
+              
+                
+                <a class="source" href="../Pulse/Pulse.html">
+                  src/components/Pulse/Pulse.js
+                </a>
+              
+                
+                <a class="source" href="../Router/Router.html">
+                  src/components/Router/Router.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/CatSound.html">
+                  src/components/Sound/CatSound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Mute.html">
+                  src/components/Sound/Mute.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Sound.html">
+                  src/components/Sound/Sound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/TurningSound.html">
+                  src/components/Sound/TurningSound.js
+                </a>
+              
+                
+                <a class="source" href="../Spinner/Spinner.html">
+                  src/components/Spinner/Spinner.js
+                </a>
+              
+                
+                <a class="source" href="../Typing/Typing.html">
+                  src/components/Typing/Typing.js
+                </a>
+              
+                
+                <a class="source" href="../../configureStore.html">
+                  src/configureStore.js
+                </a>
+              
+                
+                <a class="source" href="../../index.html">
+                  src/index.js
+                </a>
+              
+                
+                <a class="source" href="../../serviceWorker.html">
+                  src/serviceWorker.js
+                </a>
+              
+                
+                <a class="source" href="../../setupTests.html">
+                  src/setupTests.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>fulltilt.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-comment">/**
+ *
+ * FULL TILT
+ * http://github.com/richtr/Full-Tilt
+ *
+ * A standalone DeviceOrientation + DeviceMotion JavaScript library that
+ * normalises orientation sensor input, applies relevant screen orientation
+ * transforms, returns Euler Angle, Quaternion and Rotation
+ * Matrix representations back to web developers and provides conversion
+ * between all supported orientation representation types.
+ *
+ * Copyright: 2014 Rich Tibbett
+ * License:   MIT
+ *
+ */</span>
+<span class="hljs-comment">/* eslint-disable */</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> window </span>) </span>{</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>Only initialize the FULLTILT API if it is not already attached to the DOM</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">if</span> ( <span class="hljs-built_in">window</span>.FULLTILT !== <span class="hljs-literal">undefined</span> &amp;&amp; <span class="hljs-built_in">window</span>.FULLTILT !== <span class="hljs-literal">null</span> ) {
+	<span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-keyword">var</span> M_PI   = <span class="hljs-built_in">Math</span>.PI;
+<span class="hljs-keyword">var</span> M_PI_2 = M_PI / <span class="hljs-number">2</span>;
+<span class="hljs-keyword">var</span> M_2_PI = <span class="hljs-number">2</span> * M_PI;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Degree to Radian conversion</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> degToRad = M_PI / <span class="hljs-number">180</span>;
+<span class="hljs-keyword">var</span> radToDeg = <span class="hljs-number">180</span> / M_PI;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Internal device orientation + motion variables</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> sensors = {
+	<span class="hljs-string">"orientation"</span>: {
+		<span class="hljs-attr">active</span>:    <span class="hljs-literal">false</span>,
+		<span class="hljs-attr">callbacks</span>: [],
+		<span class="hljs-attr">data</span>:      <span class="hljs-literal">undefined</span>
+	},
+	<span class="hljs-string">"motion"</span>: {
+		<span class="hljs-attr">active</span>:    <span class="hljs-literal">false</span>,
+		<span class="hljs-attr">callbacks</span>: [],
+		<span class="hljs-attr">data</span>:      <span class="hljs-literal">undefined</span>
+	}
+};
+<span class="hljs-keyword">var</span> screenActive = <span class="hljs-literal">false</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Internal screen orientation variables</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> hasScreenOrientationAPI = <span class="hljs-built_in">window</span>.screen &amp;&amp; <span class="hljs-built_in">window</span>.screen.orientation &amp;&amp; <span class="hljs-built_in">window</span>.screen.orientation.angle !== <span class="hljs-literal">undefined</span> &amp;&amp; <span class="hljs-built_in">window</span>.screen.orientation.angle !== <span class="hljs-literal">null</span> ? <span class="hljs-literal">true</span> : <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">var</span> screenOrientationAngle = ( hasScreenOrientationAPI ? <span class="hljs-built_in">window</span>.screen.orientation.angle : ( <span class="hljs-built_in">window</span>.orientation || <span class="hljs-number">0</span> ) ) * degToRad;
+
+<span class="hljs-keyword">var</span> SCREEN_ROTATION_0        = <span class="hljs-number">0</span>,
+    SCREEN_ROTATION_90       = M_PI_2,
+    SCREEN_ROTATION_180      = M_PI,
+    SCREEN_ROTATION_270      = M_2_PI / <span class="hljs-number">3</span>,
+    SCREEN_ROTATION_MINUS_90 = - M_PI_2;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>Math.sign polyfill</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sign</span>(<span class="hljs-params">x</span>) </span>{
+	x = +x; <span class="hljs-comment">// convert to a number</span>
+	<span class="hljs-keyword">if</span> (x === <span class="hljs-number">0</span> || <span class="hljs-built_in">isNaN</span>(x))
+		<span class="hljs-keyword">return</span> x;
+	<span class="hljs-keyword">return</span> x &gt; <span class="hljs-number">0</span> ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>;
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>/// Promise-based Sensor Data checker //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SensorCheck</span>(<span class="hljs-params">sensorRootObj</span>) </span>{
+
+	<span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+
+		<span class="hljs-keyword">var</span> runCheck = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tries</span>) </span>{
+
+			setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+				<span class="hljs-keyword">if</span> (sensorRootObj &amp;&amp; sensorRootObj.data) {
+
+					resolve();
+
+				} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tries &gt;= <span class="hljs-number">20</span>) {
+
+					reject();
+
+				} <span class="hljs-keyword">else</span> {
+
+					runCheck(++tries);
+
+				}
+
+			}, <span class="hljs-number">50</span>);
+
+		};
+
+		runCheck(<span class="hljs-number">0</span>);
+
+	});
+
+	<span class="hljs-keyword">return</span> promise;
+
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>//// Internal Event Handlers //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleScreenOrientationChange</span> (<span class="hljs-params"></span>) </span>{
+
+	<span class="hljs-keyword">if</span> ( hasScreenOrientationAPI ) {
+
+		screenOrientationAngle = ( <span class="hljs-built_in">window</span>.screen.orientation.angle || <span class="hljs-number">0</span> ) * degToRad;
+
+	} <span class="hljs-keyword">else</span> {
+
+		screenOrientationAngle = ( <span class="hljs-built_in">window</span>.orientation || <span class="hljs-number">0</span> ) * degToRad;
+
+	}
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleDeviceOrientationChange</span> (<span class="hljs-params"> event </span>) </span>{
+
+	sensors.orientation.data = event;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>Fire every callback function each time deviceorientation is updated</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> sensors.orientation.callbacks ) {
+
+		sensors.orientation.callbacks[ i ].call( <span class="hljs-keyword">this</span> );
+
+	}
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleDeviceMotionChange</span> (<span class="hljs-params"> event </span>) </span>{
+
+	sensors.motion.data = event;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>Fire every callback function each time devicemotion is updated</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> sensors.motion.callbacks ) {
+
+		sensors.motion.callbacks[ i ].call( <span class="hljs-keyword">this</span> );
+
+	}
+
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>/// FULLTILT API Root Object /////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">var</span> FULLTILT = {};
+
+FULLTILT.version = <span class="hljs-string">"0.5.3"</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>/// FULLTILT API Root Methods /////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+FULLTILT.getDeviceOrientation = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+
+	<span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+
+		<span class="hljs-keyword">var</span> control = <span class="hljs-keyword">new</span> FULLTILT.DeviceOrientation(options);
+
+		control.start();
+
+		<span class="hljs-keyword">var</span> orientationSensorCheck = <span class="hljs-keyword">new</span> SensorCheck(sensors.orientation);
+
+		orientationSensorCheck.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+			control._alphaAvailable = (sensors.orientation.data.alpha &amp;&amp; sensors.orientation.data.alpha !== <span class="hljs-literal">null</span>);
+			control._betaAvailable = (sensors.orientation.data.beta &amp;&amp; sensors.orientation.data.beta !== <span class="hljs-literal">null</span>);
+			control._gammaAvailable = (sensors.orientation.data.gamma &amp;&amp; sensors.orientation.data.gamma !== <span class="hljs-literal">null</span>);
+
+			resolve(control);
+
+		}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+			control.stop();
+			reject(<span class="hljs-string">'DeviceOrientation is not supported'</span>);
+
+		});
+
+	});
+
+	<span class="hljs-keyword">return</span> promise;
+
+};
+
+FULLTILT.getDeviceMotion = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>) </span>{
+
+	<span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve, reject</span>) </span>{
+
+		<span class="hljs-keyword">var</span> control = <span class="hljs-keyword">new</span> FULLTILT.DeviceMotion(options);
+
+		control.start();
+
+		<span class="hljs-keyword">var</span> motionSensorCheck = <span class="hljs-keyword">new</span> SensorCheck(sensors.motion);
+
+		motionSensorCheck.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+			control._accelerationXAvailable = (sensors.motion.data.acceleration &amp;&amp; sensors.motion.data.acceleration.x);
+			control._accelerationYAvailable = (sensors.motion.data.acceleration &amp;&amp; sensors.motion.data.acceleration.y);
+			control._accelerationZAvailable = (sensors.motion.data.acceleration &amp;&amp; sensors.motion.data.acceleration.z);
+
+			control._accelerationIncludingGravityXAvailable = (sensors.motion.data.accelerationIncludingGravity &amp;&amp; sensors.motion.data.accelerationIncludingGravity.x);
+			control._accelerationIncludingGravityYAvailable = (sensors.motion.data.accelerationIncludingGravity &amp;&amp; sensors.motion.data.accelerationIncludingGravity.y);
+			control._accelerationIncludingGravityZAvailable = (sensors.motion.data.accelerationIncludingGravity &amp;&amp; sensors.motion.data.accelerationIncludingGravity.z);
+
+			control._rotationRateAlphaAvailable = (sensors.motion.data.rotationRate &amp;&amp; sensors.motion.data.rotationRate.alpha);
+			control._rotationRateBetaAvailable = (sensors.motion.data.rotationRate &amp;&amp; sensors.motion.data.rotationRate.beta);
+			control._rotationRateGammaAvailable = (sensors.motion.data.rotationRate &amp;&amp; sensors.motion.data.rotationRate.gamma);
+
+			resolve(control);
+
+		}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+			control.stop();
+			reject(<span class="hljs-string">'DeviceMotion is not supported'</span>);
+
+		});
+
+	});
+
+	<span class="hljs-keyword">return</span> promise;
+
+};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>//// FULLTILT.Quaternion //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+FULLTILT.Quaternion = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> x, y, z, w </span>) </span>{
+
+	<span class="hljs-keyword">var</span> quat, outQuat;
+
+	<span class="hljs-keyword">this</span>.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> x, y, z, w </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.x = x || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.y = y || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.z = z || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.w = w || <span class="hljs-number">1</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.copy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> quaternion </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.x = quaternion.x;
+		<span class="hljs-keyword">this</span>.y = quaternion.y;
+		<span class="hljs-keyword">this</span>.z = quaternion.z;
+		<span class="hljs-keyword">this</span>.w = quaternion.w;
+
+	};
+
+	<span class="hljs-keyword">this</span>.setFromEuler = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> _x, _y, _z;
+		<span class="hljs-keyword">var</span> _x_2, _y_2, _z_2;
+		<span class="hljs-keyword">var</span> cX, cY, cZ, sX, sY, sZ;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> euler </span>) </span>{
+
+			euler = euler || {};
+
+			_z = ( euler.alpha || <span class="hljs-number">0</span> ) * degToRad;
+			_x = ( euler.beta || <span class="hljs-number">0</span> ) * degToRad;
+			_y = ( euler.gamma || <span class="hljs-number">0</span> ) * degToRad;
+
+			_z_2 = _z / <span class="hljs-number">2</span>;
+			_x_2 = _x / <span class="hljs-number">2</span>;
+			_y_2 = _y / <span class="hljs-number">2</span>;
+
+			cX = <span class="hljs-built_in">Math</span>.cos( _x_2 );
+			cY = <span class="hljs-built_in">Math</span>.cos( _y_2 );
+			cZ = <span class="hljs-built_in">Math</span>.cos( _z_2 );
+			sX = <span class="hljs-built_in">Math</span>.sin( _x_2 );
+			sY = <span class="hljs-built_in">Math</span>.sin( _y_2 );
+			sZ = <span class="hljs-built_in">Math</span>.sin( _z_2 );
+
+			<span class="hljs-keyword">this</span>.set(
+				sX * cY * cZ - cX * sY * sZ, <span class="hljs-comment">// x</span>
+				cX * sY * cZ + sX * cY * sZ, <span class="hljs-comment">// y</span>
+				cX * cY * sZ + sX * sY * cZ, <span class="hljs-comment">// z</span>
+				cX * cY * cZ - sX * sY * sZ  <span class="hljs-comment">// w</span>
+			);
+
+			<span class="hljs-keyword">this</span>.normalize();
+
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+		};
+
+	})();
+
+	<span class="hljs-keyword">this</span>.setFromRotationMatrix = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> R;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> matrix </span>) </span>{
+
+			R = matrix.elements;
+
+			<span class="hljs-keyword">this</span>.set(
+				<span class="hljs-number">0.5</span> * <span class="hljs-built_in">Math</span>.sqrt( <span class="hljs-number">1</span> + R[<span class="hljs-number">0</span>] - R[<span class="hljs-number">4</span>] - R[<span class="hljs-number">8</span>] ) * sign( R[<span class="hljs-number">7</span>] - R[<span class="hljs-number">5</span>] ), <span class="hljs-comment">// x</span>
+				<span class="hljs-number">0.5</span> * <span class="hljs-built_in">Math</span>.sqrt( <span class="hljs-number">1</span> - R[<span class="hljs-number">0</span>] + R[<span class="hljs-number">4</span>] - R[<span class="hljs-number">8</span>] ) * sign( R[<span class="hljs-number">2</span>] - R[<span class="hljs-number">6</span>] ), <span class="hljs-comment">// y</span>
+				<span class="hljs-number">0.5</span> * <span class="hljs-built_in">Math</span>.sqrt( <span class="hljs-number">1</span> - R[<span class="hljs-number">0</span>] - R[<span class="hljs-number">4</span>] + R[<span class="hljs-number">8</span>] ) * sign( R[<span class="hljs-number">3</span>] - R[<span class="hljs-number">1</span>] ), <span class="hljs-comment">// z</span>
+				<span class="hljs-number">0.5</span> * <span class="hljs-built_in">Math</span>.sqrt( <span class="hljs-number">1</span> + R[<span class="hljs-number">0</span>] + R[<span class="hljs-number">4</span>] + R[<span class="hljs-number">8</span>] )                        <span class="hljs-comment">// w</span>
+			);
+
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+		};
+
+	})();
+
+	<span class="hljs-keyword">this</span>.multiply = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> quaternion </span>) </span>{
+
+		outQuat = FULLTILT.Quaternion.prototype.multiplyQuaternions( <span class="hljs-keyword">this</span>, quaternion );
+		<span class="hljs-keyword">this</span>.copy( outQuat );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateX = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		outQuat = FULLTILT.Quaternion.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span> ], angle );
+		<span class="hljs-keyword">this</span>.copy( outQuat );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateY = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		outQuat = FULLTILT.Quaternion.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span> ], angle );
+		<span class="hljs-keyword">this</span>.copy( outQuat );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateZ = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		outQuat = FULLTILT.Quaternion.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span> ], angle );
+		<span class="hljs-keyword">this</span>.copy( outQuat );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.normalize = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">return</span> FULLTILT.Quaternion.prototype.normalize( <span class="hljs-keyword">this</span> );
+
+	};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>Initialize object values</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">this</span>.set( x, y, z, w );
+
+};
+
+FULLTILT.Quaternion.prototype = {
+
+	<span class="hljs-attr">constructor</span>: FULLTILT.Quaternion,
+
+	<span class="hljs-attr">multiplyQuaternions</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> multipliedQuat = <span class="hljs-keyword">new</span> FULLTILT.Quaternion();
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> a, b </span>) </span>{
+
+			<span class="hljs-keyword">var</span> qax = a.x, qay = a.y, qaz = a.z, qaw = a.w;
+			<span class="hljs-keyword">var</span> qbx = b.x, qby = b.y, qbz = b.z, qbw = b.w;
+
+			multipliedQuat.set(
+				qax * qbw + qaw * qbx + qay * qbz - qaz * qby, <span class="hljs-comment">// x</span>
+				qay * qbw + qaw * qby + qaz * qbx - qax * qbz, <span class="hljs-comment">// y</span>
+				qaz * qbw + qaw * qbz + qax * qby - qay * qbx, <span class="hljs-comment">// z</span>
+				qaw * qbw - qax * qbx - qay * qby - qaz * qbz  <span class="hljs-comment">// w</span>
+			);
+
+			<span class="hljs-keyword">return</span> multipliedQuat;
+
+		};
+
+	}(),
+
+	<span class="hljs-attr">normalize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> q </span>) </span>{
+
+		<span class="hljs-keyword">var</span> len = <span class="hljs-built_in">Math</span>.sqrt( q.x * q.x + q.y * q.y + q.z * q.z + q.w * q.w );
+
+		<span class="hljs-keyword">if</span> ( len === <span class="hljs-number">0</span> ) {
+
+			q.x = <span class="hljs-number">0</span>;
+			q.y = <span class="hljs-number">0</span>;
+			q.z = <span class="hljs-number">0</span>;
+			q.w = <span class="hljs-number">1</span>;
+
+		} <span class="hljs-keyword">else</span> {
+
+			len = <span class="hljs-number">1</span> / len;
+
+			q.x *= len;
+			q.y *= len;
+			q.z *= len;
+			q.w *= len;
+
+		}
+
+		<span class="hljs-keyword">return</span> q;
+
+	},
+
+	<span class="hljs-attr">rotateByAxisAngle</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> outputQuaternion = <span class="hljs-keyword">new</span> FULLTILT.Quaternion();
+		<span class="hljs-keyword">var</span> transformQuaternion = <span class="hljs-keyword">new</span> FULLTILT.Quaternion();
+
+		<span class="hljs-keyword">var</span> halfAngle, sA;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> targetQuaternion, axis, angle </span>) </span>{
+
+			halfAngle = ( angle || <span class="hljs-number">0</span> ) / <span class="hljs-number">2</span>;
+			sA = <span class="hljs-built_in">Math</span>.sin( halfAngle );
+
+			transformQuaternion.set(
+				( axis[ <span class="hljs-number">0</span> ] || <span class="hljs-number">0</span> ) * sA, <span class="hljs-comment">// x</span>
+				( axis[ <span class="hljs-number">1</span> ] || <span class="hljs-number">0</span> ) * sA, <span class="hljs-comment">// y</span>
+				( axis[ <span class="hljs-number">2</span> ] || <span class="hljs-number">0</span> ) * sA, <span class="hljs-comment">// z</span>
+				<span class="hljs-built_in">Math</span>.cos( halfAngle )    <span class="hljs-comment">// w</span>
+			);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Multiply quaternion by q</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			outputQuaternion = FULLTILT.Quaternion.prototype.multiplyQuaternions( targetQuaternion, transformQuaternion );
+
+			<span class="hljs-keyword">return</span> FULLTILT.Quaternion.prototype.normalize( outputQuaternion );
+
+		};
+
+	}()
+
+};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>//// FULLTILT.RotationMatrix //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+FULLTILT.RotationMatrix = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> m11, m12, m13, m21, m22, m23, m31, m32, m33 </span>) </span>{
+
+	<span class="hljs-keyword">var</span> outMatrix;
+
+	<span class="hljs-keyword">this</span>.elements = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Float32Array</span>( <span class="hljs-number">9</span> );
+
+	<span class="hljs-keyword">this</span>.identity = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">this</span>.set(
+			<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+			<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>,
+			<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>
+		);
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> m11, m12, m13, m21, m22, m23, m31, m32, m33 </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">0</span> ] = m11 || <span class="hljs-number">1</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">1</span> ] = m12 || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">2</span> ] = m13 || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">3</span> ] = m21 || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">4</span> ] = m22 || <span class="hljs-number">1</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">5</span> ] = m23 || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">6</span> ] = m31 || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">7</span> ] = m32 || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">8</span> ] = m33 || <span class="hljs-number">1</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.copy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> matrix </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">0</span> ] = matrix.elements[ <span class="hljs-number">0</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">1</span> ] = matrix.elements[ <span class="hljs-number">1</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">2</span> ] = matrix.elements[ <span class="hljs-number">2</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">3</span> ] = matrix.elements[ <span class="hljs-number">3</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">4</span> ] = matrix.elements[ <span class="hljs-number">4</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">5</span> ] = matrix.elements[ <span class="hljs-number">5</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">6</span> ] = matrix.elements[ <span class="hljs-number">6</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">7</span> ] = matrix.elements[ <span class="hljs-number">7</span> ];
+		<span class="hljs-keyword">this</span>.elements[ <span class="hljs-number">8</span> ] = matrix.elements[ <span class="hljs-number">8</span> ];
+
+	};
+
+	<span class="hljs-keyword">this</span>.setFromEuler = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> _x, _y, _z;
+		<span class="hljs-keyword">var</span> cX, cY, cZ, sX, sY, sZ;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> euler </span>) </span>{
+
+			euler = euler || {};
+
+			_z = ( euler.alpha || <span class="hljs-number">0</span> ) * degToRad;
+			_x = ( euler.beta || <span class="hljs-number">0</span> ) * degToRad;
+			_y = ( euler.gamma || <span class="hljs-number">0</span> ) * degToRad;
+
+			cX = <span class="hljs-built_in">Math</span>.cos( _x );
+			cY = <span class="hljs-built_in">Math</span>.cos( _y );
+			cZ = <span class="hljs-built_in">Math</span>.cos( _z );
+			sX = <span class="hljs-built_in">Math</span>.sin( _x );
+			sY = <span class="hljs-built_in">Math</span>.sin( _y );
+			sZ = <span class="hljs-built_in">Math</span>.sin( _z );</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>ZXY-ordered rotation matrix construction.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+			<span class="hljs-keyword">this</span>.set(
+				cZ * cY - sZ * sX * sY, <span class="hljs-comment">// 1,1</span>
+				- cX * sZ,              <span class="hljs-comment">// 1,2</span>
+				cY * sZ * sX + cZ * sY, <span class="hljs-comment">// 1,3</span>
+
+				cY * sZ + cZ * sX * sY, <span class="hljs-comment">// 2,1</span>
+				cZ * cX,                <span class="hljs-comment">// 2,2</span>
+				sZ * sY - cZ * cY * sX, <span class="hljs-comment">// 2,3</span>
+
+				- cX * sY,              <span class="hljs-comment">// 3,1</span>
+				sX,                     <span class="hljs-comment">// 3,2</span>
+				cX * cY                 <span class="hljs-comment">// 3,3</span>
+			);
+
+			<span class="hljs-keyword">this</span>.normalize();
+
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+		};
+
+	})();
+
+	<span class="hljs-keyword">this</span>.setFromQuaternion = (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> sqw, sqx, sqy, sqz;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> q </span>) </span>{
+
+			sqw = q.w * q.w;
+			sqx = q.x * q.x;
+			sqy = q.y * q.y;
+			sqz = q.z * q.z;
+
+			<span class="hljs-keyword">this</span>.set(
+				sqw + sqx - sqy - sqz,       <span class="hljs-comment">// 1,1</span>
+				<span class="hljs-number">2</span> * (q.x * q.y - q.w * q.z), <span class="hljs-comment">// 1,2</span>
+				<span class="hljs-number">2</span> * (q.x * q.z + q.w * q.y), <span class="hljs-comment">// 1,3</span>
+
+				<span class="hljs-number">2</span> * (q.x * q.y + q.w * q.z), <span class="hljs-comment">// 2,1</span>
+				sqw - sqx + sqy - sqz,       <span class="hljs-comment">// 2,2</span>
+				<span class="hljs-number">2</span> * (q.y * q.z - q.w * q.x), <span class="hljs-comment">// 2,3</span>
+
+				<span class="hljs-number">2</span> * (q.x * q.z - q.w * q.y), <span class="hljs-comment">// 3,1</span>
+				<span class="hljs-number">2</span> * (q.y * q.z + q.w * q.x), <span class="hljs-comment">// 3,2</span>
+				sqw - sqx - sqy + sqz        <span class="hljs-comment">// 3,3</span>
+			);
+
+			<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+		};
+
+	})();
+
+	<span class="hljs-keyword">this</span>.multiply = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> m </span>) </span>{
+
+		outMatrix = FULLTILT.RotationMatrix.prototype.multiplyMatrices( <span class="hljs-keyword">this</span>, m );
+		<span class="hljs-keyword">this</span>.copy( outMatrix );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateX = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		outMatrix = FULLTILT.RotationMatrix.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span> ], angle );
+		<span class="hljs-keyword">this</span>.copy( outMatrix );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateY = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		outMatrix = FULLTILT.RotationMatrix.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span> ], angle );
+		<span class="hljs-keyword">this</span>.copy( outMatrix );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateZ = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		outMatrix = FULLTILT.RotationMatrix.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span> ], angle );
+		<span class="hljs-keyword">this</span>.copy( outMatrix );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.normalize = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">return</span> FULLTILT.RotationMatrix.prototype.normalize( <span class="hljs-keyword">this</span> );
+
+	};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Initialize object values</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">this</span>.set( m11, m12, m13, m21, m22, m23, m31, m32, m33 );
+
+};
+
+FULLTILT.RotationMatrix.prototype = {
+
+	<span class="hljs-attr">constructor</span>: FULLTILT.RotationMatrix,
+
+	<span class="hljs-attr">multiplyMatrices</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> matrix = <span class="hljs-keyword">new</span> FULLTILT.RotationMatrix();
+
+		<span class="hljs-keyword">var</span> aE, bE;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> a, b </span>) </span>{
+
+			aE = a.elements;
+			bE = b.elements;
+
+			matrix.set(
+				aE[<span class="hljs-number">0</span>] * bE[<span class="hljs-number">0</span>] + aE[<span class="hljs-number">1</span>] * bE[<span class="hljs-number">3</span>] + aE[<span class="hljs-number">2</span>] * bE[<span class="hljs-number">6</span>],
+				aE[<span class="hljs-number">0</span>] * bE[<span class="hljs-number">1</span>] + aE[<span class="hljs-number">1</span>] * bE[<span class="hljs-number">4</span>] + aE[<span class="hljs-number">2</span>] * bE[<span class="hljs-number">7</span>],
+				aE[<span class="hljs-number">0</span>] * bE[<span class="hljs-number">2</span>] + aE[<span class="hljs-number">1</span>] * bE[<span class="hljs-number">5</span>] + aE[<span class="hljs-number">2</span>] * bE[<span class="hljs-number">8</span>],
+
+				aE[<span class="hljs-number">3</span>] * bE[<span class="hljs-number">0</span>] + aE[<span class="hljs-number">4</span>] * bE[<span class="hljs-number">3</span>] + aE[<span class="hljs-number">5</span>] * bE[<span class="hljs-number">6</span>],
+				aE[<span class="hljs-number">3</span>] * bE[<span class="hljs-number">1</span>] + aE[<span class="hljs-number">4</span>] * bE[<span class="hljs-number">4</span>] + aE[<span class="hljs-number">5</span>] * bE[<span class="hljs-number">7</span>],
+				aE[<span class="hljs-number">3</span>] * bE[<span class="hljs-number">2</span>] + aE[<span class="hljs-number">4</span>] * bE[<span class="hljs-number">5</span>] + aE[<span class="hljs-number">5</span>] * bE[<span class="hljs-number">8</span>],
+
+				aE[<span class="hljs-number">6</span>] * bE[<span class="hljs-number">0</span>] + aE[<span class="hljs-number">7</span>] * bE[<span class="hljs-number">3</span>] + aE[<span class="hljs-number">8</span>] * bE[<span class="hljs-number">6</span>],
+				aE[<span class="hljs-number">6</span>] * bE[<span class="hljs-number">1</span>] + aE[<span class="hljs-number">7</span>] * bE[<span class="hljs-number">4</span>] + aE[<span class="hljs-number">8</span>] * bE[<span class="hljs-number">7</span>],
+				aE[<span class="hljs-number">6</span>] * bE[<span class="hljs-number">2</span>] + aE[<span class="hljs-number">7</span>] * bE[<span class="hljs-number">5</span>] + aE[<span class="hljs-number">8</span>] * bE[<span class="hljs-number">8</span>]
+			);
+
+			<span class="hljs-keyword">return</span> matrix;
+
+		};
+
+	}(),
+
+	<span class="hljs-attr">normalize</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> matrix </span>) </span>{
+
+		<span class="hljs-keyword">var</span> R = matrix.elements;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Calculate matrix determinant</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		<span class="hljs-keyword">var</span> determinant = R[<span class="hljs-number">0</span>] * R[<span class="hljs-number">4</span>] * R[<span class="hljs-number">8</span>] - R[<span class="hljs-number">0</span>] * R[<span class="hljs-number">5</span>] * R[<span class="hljs-number">7</span>] - R[<span class="hljs-number">1</span>] * R[<span class="hljs-number">3</span>] * R[<span class="hljs-number">8</span>] + R[<span class="hljs-number">1</span>] * R[<span class="hljs-number">5</span>] * R[<span class="hljs-number">6</span>] + R[<span class="hljs-number">2</span>] * R[<span class="hljs-number">3</span>] * R[<span class="hljs-number">7</span>] - R[<span class="hljs-number">2</span>] * R[<span class="hljs-number">4</span>] * R[<span class="hljs-number">6</span>];</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Normalize matrix values</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>		R[<span class="hljs-number">0</span>] /= determinant;
+		R[<span class="hljs-number">1</span>] /= determinant;
+		R[<span class="hljs-number">2</span>] /= determinant;
+		R[<span class="hljs-number">3</span>] /= determinant;
+		R[<span class="hljs-number">4</span>] /= determinant;
+		R[<span class="hljs-number">5</span>] /= determinant;
+		R[<span class="hljs-number">6</span>] /= determinant;
+		R[<span class="hljs-number">7</span>] /= determinant;
+		R[<span class="hljs-number">8</span>] /= determinant;
+
+		matrix.elements = R;
+
+		<span class="hljs-keyword">return</span> matrix;
+
+	},
+
+	<span class="hljs-attr">rotateByAxisAngle</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> outputMatrix = <span class="hljs-keyword">new</span> FULLTILT.RotationMatrix();
+		<span class="hljs-keyword">var</span> transformMatrix = <span class="hljs-keyword">new</span> FULLTILT.RotationMatrix();
+
+		<span class="hljs-keyword">var</span> sA, cA;
+		<span class="hljs-keyword">var</span> validAxis = <span class="hljs-literal">false</span>;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> targetRotationMatrix, axis, angle </span>) </span>{
+
+			transformMatrix.identity(); <span class="hljs-comment">// reset transform matrix</span>
+
+			validAxis = <span class="hljs-literal">false</span>;
+
+			sA = <span class="hljs-built_in">Math</span>.sin( angle );
+			cA = <span class="hljs-built_in">Math</span>.cos( angle );
+
+			<span class="hljs-keyword">if</span> ( axis[ <span class="hljs-number">0</span> ] === <span class="hljs-number">1</span> &amp;&amp; axis[ <span class="hljs-number">1</span> ] === <span class="hljs-number">0</span> &amp;&amp; axis[ <span class="hljs-number">2</span> ] === <span class="hljs-number">0</span> ) { <span class="hljs-comment">// x</span>
+
+				validAxis = <span class="hljs-literal">true</span>;
+
+				transformMatrix.elements[<span class="hljs-number">4</span>] = cA;
+				transformMatrix.elements[<span class="hljs-number">5</span>] = -sA;
+				transformMatrix.elements[<span class="hljs-number">7</span>] = sA;
+				transformMatrix.elements[<span class="hljs-number">8</span>] = cA;
+
+	 		} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( axis[ <span class="hljs-number">1</span> ] === <span class="hljs-number">1</span> &amp;&amp; axis[ <span class="hljs-number">0</span> ] === <span class="hljs-number">0</span> &amp;&amp; axis[ <span class="hljs-number">2</span> ] === <span class="hljs-number">0</span> ) { <span class="hljs-comment">// y</span>
+
+				validAxis = <span class="hljs-literal">true</span>;
+
+				transformMatrix.elements[<span class="hljs-number">0</span>] = cA;
+				transformMatrix.elements[<span class="hljs-number">2</span>] = sA;
+				transformMatrix.elements[<span class="hljs-number">6</span>] = -sA;
+				transformMatrix.elements[<span class="hljs-number">8</span>] = cA;
+
+	 		} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( axis[ <span class="hljs-number">2</span> ] === <span class="hljs-number">1</span> &amp;&amp; axis[ <span class="hljs-number">0</span> ] === <span class="hljs-number">0</span> &amp;&amp; axis[ <span class="hljs-number">1</span> ] === <span class="hljs-number">0</span> ) { <span class="hljs-comment">// z</span>
+
+				validAxis = <span class="hljs-literal">true</span>;
+
+				transformMatrix.elements[<span class="hljs-number">0</span>] = cA;
+				transformMatrix.elements[<span class="hljs-number">1</span>] = -sA;
+				transformMatrix.elements[<span class="hljs-number">3</span>] = sA;
+				transformMatrix.elements[<span class="hljs-number">4</span>] = cA;
+
+	 		}
+
+			<span class="hljs-keyword">if</span> ( validAxis ) {
+
+				outputMatrix = FULLTILT.RotationMatrix.prototype.multiplyMatrices( targetRotationMatrix, transformMatrix );
+
+				outputMatrix = FULLTILT.RotationMatrix.prototype.normalize( outputMatrix );
+
+			} <span class="hljs-keyword">else</span> {
+
+				outputMatrix = targetRotationMatrix;
+
+			}
+
+			<span class="hljs-keyword">return</span> outputMatrix;
+
+		};
+
+	}()
+
+};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>//// FULLTILT.Euler //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+FULLTILT.Euler = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> alpha, beta, gamma </span>) </span>{
+
+	<span class="hljs-keyword">this</span>.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> alpha, beta, gamma </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.alpha = alpha || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.beta  = beta  || <span class="hljs-number">0</span>;
+		<span class="hljs-keyword">this</span>.gamma = gamma || <span class="hljs-number">0</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.copy = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> inEuler </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.alpha = inEuler.alpha;
+		<span class="hljs-keyword">this</span>.beta  = inEuler.beta;
+		<span class="hljs-keyword">this</span>.gamma = inEuler.gamma;
+
+	};
+
+	<span class="hljs-keyword">this</span>.setFromRotationMatrix = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> R, _alpha, _beta, _gamma;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> matrix </span>) </span>{
+
+			R = matrix.elements;
+
+			<span class="hljs-keyword">if</span> (R[<span class="hljs-number">8</span>] &gt; <span class="hljs-number">0</span>) { <span class="hljs-comment">// cos(beta) &gt; 0</span>
+
+				_alpha = <span class="hljs-built_in">Math</span>.atan2(-R[<span class="hljs-number">1</span>], R[<span class="hljs-number">4</span>]);
+				_beta  = <span class="hljs-built_in">Math</span>.asin(R[<span class="hljs-number">7</span>]); <span class="hljs-comment">// beta (-pi/2, pi/2)</span>
+				_gamma = <span class="hljs-built_in">Math</span>.atan2(-R[<span class="hljs-number">6</span>], R[<span class="hljs-number">8</span>]); <span class="hljs-comment">// gamma (-pi/2, pi/2)</span>
+
+			} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (R[<span class="hljs-number">8</span>] &lt; <span class="hljs-number">0</span>) {  <span class="hljs-comment">// cos(beta) &lt; 0</span>
+
+				_alpha = <span class="hljs-built_in">Math</span>.atan2(R[<span class="hljs-number">1</span>], -R[<span class="hljs-number">4</span>]);
+				_beta  = -<span class="hljs-built_in">Math</span>.asin(R[<span class="hljs-number">7</span>]);
+				_beta  += (_beta &gt;= <span class="hljs-number">0</span>) ? - M_PI : M_PI; <span class="hljs-comment">// beta [-pi,-pi/2) U (pi/2,pi)</span>
+				_gamma = <span class="hljs-built_in">Math</span>.atan2(R[<span class="hljs-number">6</span>], -R[<span class="hljs-number">8</span>]); <span class="hljs-comment">// gamma (-pi/2, pi/2)</span>
+
+			} <span class="hljs-keyword">else</span> { <span class="hljs-comment">// R[8] == 0</span>
+
+				<span class="hljs-keyword">if</span> (R[<span class="hljs-number">6</span>] &gt; <span class="hljs-number">0</span>) {  <span class="hljs-comment">// cos(gamma) == 0, cos(beta) &gt; 0</span>
+
+					_alpha = <span class="hljs-built_in">Math</span>.atan2(-R[<span class="hljs-number">1</span>], R[<span class="hljs-number">4</span>]);
+					_beta  = <span class="hljs-built_in">Math</span>.asin(R[<span class="hljs-number">7</span>]); <span class="hljs-comment">// beta [-pi/2, pi/2]</span>
+					_gamma = - M_PI_2; <span class="hljs-comment">// gamma = -pi/2</span>
+
+				} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (R[<span class="hljs-number">6</span>] &lt; <span class="hljs-number">0</span>) { <span class="hljs-comment">// cos(gamma) == 0, cos(beta) &lt; 0</span>
+
+					_alpha = <span class="hljs-built_in">Math</span>.atan2(R[<span class="hljs-number">1</span>], -R[<span class="hljs-number">4</span>]);
+					_beta  = -<span class="hljs-built_in">Math</span>.asin(R[<span class="hljs-number">7</span>]);
+					_beta  += (_beta &gt;= <span class="hljs-number">0</span>) ? - M_PI : M_PI; <span class="hljs-comment">// beta [-pi,-pi/2) U (pi/2,pi)</span>
+					_gamma = - M_PI_2; <span class="hljs-comment">// gamma = -pi/2</span>
+
+				} <span class="hljs-keyword">else</span> { <span class="hljs-comment">// R[6] == 0, cos(beta) == 0</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>gimbal lock discontinuity</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>					_alpha = <span class="hljs-built_in">Math</span>.atan2(R[<span class="hljs-number">3</span>], R[<span class="hljs-number">0</span>]);
+					_beta  = (R[<span class="hljs-number">7</span>] &gt; <span class="hljs-number">0</span>) ? M_PI_2 : - M_PI_2; <span class="hljs-comment">// beta = +-pi/2</span>
+					_gamma = <span class="hljs-number">0</span>; <span class="hljs-comment">// gamma = 0</span>
+
+				}
+
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>alpha is in [-pi, pi], make sure it is in [0, 2*pi).</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">if</span> (_alpha &lt; <span class="hljs-number">0</span>) {
+				_alpha += M_2_PI; <span class="hljs-comment">// alpha [0, 2*pi)</span>
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>Convert to degrees</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			_alpha *= radToDeg;
+			_beta  *= radToDeg;
+			_gamma *= radToDeg;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>apply derived euler angles to current object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">this</span>.set( _alpha, _beta, _gamma );
+
+		};
+
+	})();
+
+	<span class="hljs-keyword">this</span>.setFromQuaternion = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> _alpha, _beta, _gamma;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> q </span>) </span>{
+
+			<span class="hljs-keyword">var</span> sqw = q.w * q.w;
+			<span class="hljs-keyword">var</span> sqx = q.x * q.x;
+			<span class="hljs-keyword">var</span> sqy = q.y * q.y;
+			<span class="hljs-keyword">var</span> sqz = q.z * q.z;
+
+			<span class="hljs-keyword">var</span> unitLength = sqw + sqx + sqy + sqz; <span class="hljs-comment">// Normalised == 1, otherwise correction divisor.</span>
+			<span class="hljs-keyword">var</span> wxyz = q.w * q.x + q.y * q.z;
+			<span class="hljs-keyword">var</span> epsilon = <span class="hljs-number">1e-6</span>; <span class="hljs-comment">// rounding factor</span>
+
+			<span class="hljs-keyword">if</span> (wxyz &gt; (<span class="hljs-number">0.5</span> - epsilon) * unitLength) {
+
+				_alpha = <span class="hljs-number">2</span> * <span class="hljs-built_in">Math</span>.atan2(q.y, q.w);
+				_beta = M_PI_2;
+				_gamma = <span class="hljs-number">0</span>;
+
+			} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (wxyz &lt; (<span class="hljs-number">-0.5</span> + epsilon) * unitLength) {
+
+				_alpha = <span class="hljs-number">-2</span> * <span class="hljs-built_in">Math</span>.atan2(q.y, q.w);
+				_beta = -M_PI_2;
+				_gamma = <span class="hljs-number">0</span>;
+
+			} <span class="hljs-keyword">else</span> {
+
+				<span class="hljs-keyword">var</span> aX = sqw - sqx + sqy - sqz;
+				<span class="hljs-keyword">var</span> aY = <span class="hljs-number">2</span> * (q.w * q.z - q.x * q.y);
+
+				<span class="hljs-keyword">var</span> gX = sqw - sqx - sqy + sqz;
+				<span class="hljs-keyword">var</span> gY = <span class="hljs-number">2</span> * (q.w * q.y - q.x * q.z);
+
+				<span class="hljs-keyword">if</span> (gX &gt; <span class="hljs-number">0</span>) {
+
+					_alpha = <span class="hljs-built_in">Math</span>.atan2(aY, aX);
+					_beta  = <span class="hljs-built_in">Math</span>.asin(<span class="hljs-number">2</span> * wxyz / unitLength);
+					_gamma = <span class="hljs-built_in">Math</span>.atan2(gY, gX);
+
+				} <span class="hljs-keyword">else</span> {
+
+					_alpha = <span class="hljs-built_in">Math</span>.atan2(-aY, -aX);
+					_beta  = -<span class="hljs-built_in">Math</span>.asin(<span class="hljs-number">2</span> * wxyz / unitLength);
+					_beta  += _beta &lt; <span class="hljs-number">0</span> ? M_PI : - M_PI;
+					_gamma = <span class="hljs-built_in">Math</span>.atan2(-gY, -gX);
+
+				}
+
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>alpha is in [-pi, pi], make sure it is in [0, 2*pi).</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">if</span> (_alpha &lt; <span class="hljs-number">0</span>) {
+				_alpha += M_2_PI; <span class="hljs-comment">// alpha [0, 2*pi)</span>
+			}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Convert to degrees</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			_alpha *= radToDeg;
+			_beta  *= radToDeg;
+			_gamma *= radToDeg;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>apply derived euler angles to current object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			<span class="hljs-keyword">this</span>.set( _alpha, _beta, _gamma );
+
+		};
+
+	})();
+
+	<span class="hljs-keyword">this</span>.rotateX = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		FULLTILT.Euler.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span> ], angle );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateY = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		FULLTILT.Euler.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span> ], angle );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};
+
+	<span class="hljs-keyword">this</span>.rotateZ = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> angle </span>) </span>{
+
+		FULLTILT.Euler.prototype.rotateByAxisAngle( <span class="hljs-keyword">this</span>, [ <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span> ], angle );
+
+		<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+
+	};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Initialize object values</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">this</span>.set( alpha, beta, gamma );
+
+};
+
+FULLTILT.Euler.prototype = {
+
+	<span class="hljs-attr">constructor</span>: FULLTILT.Euler,
+
+	<span class="hljs-attr">rotateByAxisAngle</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> _matrix = <span class="hljs-keyword">new</span> FULLTILT.RotationMatrix();
+		<span class="hljs-keyword">var</span> outEuler;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> targetEuler, axis, angle </span>) </span>{
+
+			_matrix.setFromEuler( targetEuler );
+
+			_matrix = FULLTILT.RotationMatrix.prototype.rotateByAxisAngle( _matrix, axis, angle );
+
+			targetEuler.setFromRotationMatrix( _matrix );
+
+			<span class="hljs-keyword">return</span> targetEuler;
+
+		};
+
+	}()
+
+};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>/// FULLTILT.DeviceOrientation //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+FULLTILT.DeviceOrientation = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options</span>) </span>{
+
+	<span class="hljs-keyword">this</span>.options = options || {}; <span class="hljs-comment">// by default use UA deviceorientation 'type' ("game" on iOS, "world" on Android)</span>
+
+	<span class="hljs-keyword">var</span> tries = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">var</span> maxTries = <span class="hljs-number">200</span>;
+	<span class="hljs-keyword">var</span> successCount = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">var</span> successThreshold = <span class="hljs-number">10</span>;
+
+	<span class="hljs-keyword">this</span>.alphaOffsetScreen = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">this</span>.alphaOffsetDevice = <span class="hljs-literal">undefined</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>Create a game-based deviceorientation object (initial alpha === 0 degrees)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	<span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.options.type === <span class="hljs-string">"game"</span>) {
+
+		<span class="hljs-keyword">var</span> setGameAlphaOffset = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
+
+			<span class="hljs-keyword">if</span> (evt.alpha !== <span class="hljs-literal">null</span>) { <span class="hljs-comment">// do regardless of whether 'evt.absolute' is also true</span>
+				<span class="hljs-keyword">this</span>.alphaOffsetDevice = <span class="hljs-keyword">new</span> FULLTILT.Euler(evt.alpha, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+				<span class="hljs-keyword">this</span>.alphaOffsetDevice.rotateZ( -screenOrientationAngle );</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Discard first {successThreshold} responses while a better compass lock is found by UA</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">if</span>(++successCount &gt;= successThreshold) {
+					<span class="hljs-built_in">window</span>.removeEventListener( <span class="hljs-string">'deviceorientation'</span>, setGameAlphaOffset, <span class="hljs-literal">false</span> );
+					<span class="hljs-keyword">return</span>;
+				}
+			}
+
+			<span class="hljs-keyword">if</span>(++tries &gt;= maxTries) {
+				<span class="hljs-built_in">window</span>.removeEventListener( <span class="hljs-string">'deviceorientation'</span>, setGameAlphaOffset, <span class="hljs-literal">false</span> );
+			}
+
+		}.bind(<span class="hljs-keyword">this</span>);
+
+		<span class="hljs-built_in">window</span>.addEventListener( <span class="hljs-string">'deviceorientation'</span>, setGameAlphaOffset, <span class="hljs-literal">false</span> );</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Create a compass-based deviceorientation object (initial alpha === compass degrees)</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>	} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.options.type === <span class="hljs-string">"world"</span>) {
+
+		<span class="hljs-keyword">var</span> setCompassAlphaOffset = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
+
+			<span class="hljs-keyword">if</span> (evt.absolute !== <span class="hljs-literal">true</span> &amp;&amp; evt.webkitCompassAccuracy !== <span class="hljs-literal">undefined</span> &amp;&amp; evt.webkitCompassAccuracy !== <span class="hljs-literal">null</span> &amp;&amp; +evt.webkitCompassAccuracy &gt;= <span class="hljs-number">0</span> &amp;&amp; +evt.webkitCompassAccuracy &lt; <span class="hljs-number">50</span>) {
+				<span class="hljs-keyword">this</span>.alphaOffsetDevice = <span class="hljs-keyword">new</span> FULLTILT.Euler(evt.webkitCompassHeading, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+				<span class="hljs-keyword">this</span>.alphaOffsetDevice.rotateZ( screenOrientationAngle );
+				<span class="hljs-keyword">this</span>.alphaOffsetScreen = screenOrientationAngle;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Discard first {successThreshold} responses while a better compass lock is found by UA</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>				<span class="hljs-keyword">if</span>(++successCount &gt;= successThreshold) {
+					<span class="hljs-built_in">window</span>.removeEventListener( <span class="hljs-string">'deviceorientation'</span>, setCompassAlphaOffset, <span class="hljs-literal">false</span> );
+					<span class="hljs-keyword">return</span>;
+				}
+			}
+
+			<span class="hljs-keyword">if</span>(++tries &gt;= maxTries) {
+				<span class="hljs-built_in">window</span>.removeEventListener( <span class="hljs-string">'deviceorientation'</span>, setCompassAlphaOffset, <span class="hljs-literal">false</span> );
+			}
+
+		}.bind(<span class="hljs-keyword">this</span>);
+
+		<span class="hljs-built_in">window</span>.addEventListener( <span class="hljs-string">'deviceorientation'</span>, setCompassAlphaOffset, <span class="hljs-literal">false</span> );
+
+	} <span class="hljs-comment">// else... use whatever orientation system the UA provides ("game" on iOS, "world" on Android)</span>
+
+};
+
+FULLTILT.DeviceOrientation.prototype = {
+
+	<span class="hljs-attr">constructor</span>: FULLTILT.DeviceOrientation,
+
+	<span class="hljs-attr">start</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> callback </span>) </span>{
+
+		<span class="hljs-keyword">if</span> ( callback &amp;&amp; <span class="hljs-built_in">Object</span>.prototype.toString.call( callback ) == <span class="hljs-string">'[object Function]'</span> ) {
+
+			sensors.orientation.callbacks.push( callback );
+
+		}
+
+		<span class="hljs-keyword">if</span>( !screenActive ) {
+
+			<span class="hljs-keyword">if</span> ( hasScreenOrientationAPI ) {
+
+			<span class="hljs-built_in">window</span>.screen.orientation.addEventListener( <span class="hljs-string">'change'</span>, handleScreenOrientationChange, <span class="hljs-literal">false</span> );
+
+			} <span class="hljs-keyword">else</span> {
+
+				<span class="hljs-built_in">window</span>.addEventListener( <span class="hljs-string">'orientationchange'</span>, handleScreenOrientationChange, <span class="hljs-literal">false</span> );
+
+			}
+
+		}
+
+		<span class="hljs-keyword">if</span> ( !sensors.orientation.active ) {
+
+			<span class="hljs-built_in">window</span>.addEventListener( <span class="hljs-string">'deviceorientation'</span>, handleDeviceOrientationChange, <span class="hljs-literal">false</span> );
+
+			sensors.orientation.active = <span class="hljs-literal">true</span>;
+
+		}
+
+	},
+
+	<span class="hljs-attr">stop</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">if</span> ( sensors.orientation.active ) {
+
+			<span class="hljs-built_in">window</span>.removeEventListener( <span class="hljs-string">'deviceorientation'</span>, handleDeviceOrientationChange, <span class="hljs-literal">false</span> );
+
+			sensors.orientation.active = <span class="hljs-literal">false</span>;
+
+		}
+
+	},
+
+	<span class="hljs-attr">listen</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> callback </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.start( callback );
+
+	},
+
+	<span class="hljs-attr">getFixedFrameQuaternion</span>: (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> euler = <span class="hljs-keyword">new</span> FULLTILT.Euler();
+		<span class="hljs-keyword">var</span> matrix = <span class="hljs-keyword">new</span> FULLTILT.RotationMatrix();
+		<span class="hljs-keyword">var</span> quaternion = <span class="hljs-keyword">new</span> FULLTILT.Quaternion();
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+			<span class="hljs-keyword">var</span> orientationData = sensors.orientation.data || { <span class="hljs-attr">alpha</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">beta</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">gamma</span>: <span class="hljs-number">0</span> };
+
+			<span class="hljs-keyword">var</span> adjustedAlpha = orientationData.alpha;
+
+			<span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.alphaOffsetDevice) {
+				matrix.setFromEuler( <span class="hljs-keyword">this</span>.alphaOffsetDevice );
+				matrix.rotateZ( - <span class="hljs-keyword">this</span>.alphaOffsetScreen );
+				euler.setFromRotationMatrix( matrix );
+
+				<span class="hljs-keyword">if</span> (euler.alpha &lt; <span class="hljs-number">0</span>) {
+					euler.alpha += <span class="hljs-number">360</span>;
+				}
+
+				euler.alpha %= <span class="hljs-number">360</span>;
+
+				adjustedAlpha -= euler.alpha;
+			}
+
+			euler.set(
+				adjustedAlpha,
+				orientationData.beta,
+				orientationData.gamma
+			);
+
+			quaternion.setFromEuler( euler );
+
+			<span class="hljs-keyword">return</span> quaternion;
+
+		};
+
+	})(),
+
+	<span class="hljs-attr">getScreenAdjustedQuaternion</span>: (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> quaternion;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+			quaternion = <span class="hljs-keyword">this</span>.getFixedFrameQuaternion();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Automatically apply screen orientation transform</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			quaternion.rotateZ( - screenOrientationAngle );
+
+			<span class="hljs-keyword">return</span> quaternion;
+
+		};
+
+	})(),
+
+	<span class="hljs-attr">getFixedFrameMatrix</span>: (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> euler = <span class="hljs-keyword">new</span> FULLTILT.Euler();
+		<span class="hljs-keyword">var</span> matrix = <span class="hljs-keyword">new</span> FULLTILT.RotationMatrix();
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+			<span class="hljs-keyword">var</span> orientationData = sensors.orientation.data || { <span class="hljs-attr">alpha</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">beta</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">gamma</span>: <span class="hljs-number">0</span> };
+
+			<span class="hljs-keyword">var</span> adjustedAlpha = orientationData.alpha;
+
+			<span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.alphaOffsetDevice) {
+				matrix.setFromEuler( <span class="hljs-keyword">this</span>.alphaOffsetDevice );
+				matrix.rotateZ( - <span class="hljs-keyword">this</span>.alphaOffsetScreen );
+				euler.setFromRotationMatrix( matrix );
+
+				<span class="hljs-keyword">if</span> (euler.alpha &lt; <span class="hljs-number">0</span>) {
+					euler.alpha += <span class="hljs-number">360</span>;
+				}
+
+				euler.alpha %= <span class="hljs-number">360</span>;
+
+				adjustedAlpha -= euler.alpha;
+			}
+
+			euler.set(
+				adjustedAlpha,
+				orientationData.beta,
+				orientationData.gamma
+			);
+
+			matrix.setFromEuler( euler );
+
+			<span class="hljs-keyword">return</span> matrix;
+
+		};
+
+	})(),
+
+	<span class="hljs-attr">getScreenAdjustedMatrix</span>: (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> matrix;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+			matrix = <span class="hljs-keyword">this</span>.getFixedFrameMatrix();</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Automatically apply screen orientation transform</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>			matrix.rotateZ( - screenOrientationAngle );
+
+			<span class="hljs-keyword">return</span> matrix;
+
+		};
+
+	})(),
+
+	<span class="hljs-attr">getFixedFrameEuler</span>: (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> euler = <span class="hljs-keyword">new</span> FULLTILT.Euler();
+		<span class="hljs-keyword">var</span> matrix;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+			matrix = <span class="hljs-keyword">this</span>.getFixedFrameMatrix();
+
+			euler.setFromRotationMatrix( matrix );
+
+			<span class="hljs-keyword">return</span> euler;
+
+		};
+
+	})(),
+
+	<span class="hljs-attr">getScreenAdjustedEuler</span>: (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> euler = <span class="hljs-keyword">new</span> FULLTILT.Euler();
+		<span class="hljs-keyword">var</span> matrix;
+
+		<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+			matrix = <span class="hljs-keyword">this</span>.getScreenAdjustedMatrix();
+
+			euler.setFromRotationMatrix( matrix );
+
+			<span class="hljs-keyword">return</span> euler;
+
+		};
+
+	})(),
+
+	<span class="hljs-attr">isAbsolute</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">if</span> ( sensors.orientation.data &amp;&amp; sensors.orientation.data.absolute === <span class="hljs-literal">true</span> ) {
+			<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+		}
+
+		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+
+	},
+
+	<span class="hljs-attr">getLastRawEventData</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">return</span> sensors.orientation.data || {};
+
+	},
+
+	<span class="hljs-attr">_alphaAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_betaAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_gammaAvailable</span>: <span class="hljs-literal">false</span>,
+
+	<span class="hljs-attr">isAvailable</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">_valueType</span>)</span>{
+
+		<span class="hljs-keyword">switch</span>(_valueType){
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ALPHA:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._alphaAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.BETA:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._betaAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.GAMMA:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._gammaAvailable;
+		}
+
+	},
+
+	<span class="hljs-attr">ALPHA</span>: <span class="hljs-string">'alpha'</span>,
+	<span class="hljs-attr">BETA</span>: <span class="hljs-string">'beta'</span>,
+	<span class="hljs-attr">GAMMA</span>: <span class="hljs-string">'gamma'</span>
+
+};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>/// FULLTILT.DeviceMotion //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+FULLTILT.DeviceMotion = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options</span>) </span>{
+
+	<span class="hljs-keyword">this</span>.options = options || {}; <span class="hljs-comment">// placeholder object since no options are currently supported</span>
+
+};
+
+FULLTILT.DeviceMotion.prototype = {
+
+	<span class="hljs-attr">constructor</span>: FULLTILT.DeviceMotion,
+
+	<span class="hljs-attr">start</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> callback </span>) </span>{
+
+		<span class="hljs-keyword">if</span> ( callback &amp;&amp; <span class="hljs-built_in">Object</span>.prototype.toString.call( callback ) == <span class="hljs-string">'[object Function]'</span> ) {
+
+			sensors.motion.callbacks.push( callback );
+
+		}
+
+		<span class="hljs-keyword">if</span>( !screenActive ) {
+
+			<span class="hljs-keyword">if</span> ( hasScreenOrientationAPI ) {
+
+				<span class="hljs-built_in">window</span>.screen.orientation.addEventListener( <span class="hljs-string">'change'</span>, handleScreenOrientationChange, <span class="hljs-literal">false</span> );
+
+			} <span class="hljs-keyword">else</span> {
+
+				<span class="hljs-built_in">window</span>.addEventListener( <span class="hljs-string">'orientationchange'</span>, handleScreenOrientationChange, <span class="hljs-literal">false</span> );
+
+			}
+
+		}
+
+		<span class="hljs-keyword">if</span> ( !sensors.motion.active ) {
+
+			<span class="hljs-built_in">window</span>.addEventListener( <span class="hljs-string">'devicemotion'</span>, handleDeviceMotionChange, <span class="hljs-literal">false</span> );
+
+			sensors.motion.active = <span class="hljs-literal">true</span>;
+
+		}
+
+	},
+
+	<span class="hljs-attr">stop</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">if</span> ( sensors.motion.active ) {
+
+			<span class="hljs-built_in">window</span>.removeEventListener( <span class="hljs-string">'devicemotion'</span>, handleDeviceMotionChange, <span class="hljs-literal">false</span> );
+
+			sensors.motion.active = <span class="hljs-literal">false</span>;
+
+		}
+
+	},
+
+	<span class="hljs-attr">listen</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"> callback </span>) </span>{
+
+		<span class="hljs-keyword">this</span>.start( callback );
+
+	},
+
+	<span class="hljs-attr">getScreenAdjustedAcceleration</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> accData = sensors.motion.data &amp;&amp; sensors.motion.data.acceleration ? sensors.motion.data.acceleration : { <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">z</span>: <span class="hljs-number">0</span> };
+		<span class="hljs-keyword">var</span> screenAccData = {};
+
+		<span class="hljs-keyword">switch</span> ( screenOrientationAngle ) {
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_90:
+				screenAccData.x = - accData.y;
+				screenAccData.y =   accData.x;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_180:
+				screenAccData.x = - accData.x;
+				screenAccData.y = - accData.y;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_270:
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_MINUS_90:
+				screenAccData.x =   accData.y;
+				screenAccData.y = - accData.x;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">default</span>: <span class="hljs-comment">// SCREEN_ROTATION_0</span>
+				screenAccData.x =   accData.x;
+				screenAccData.y =   accData.y;
+				<span class="hljs-keyword">break</span>;
+		}
+
+		screenAccData.z = accData.z;
+
+		<span class="hljs-keyword">return</span> screenAccData;
+
+	},
+
+	<span class="hljs-attr">getScreenAdjustedAccelerationIncludingGravity</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> accGData = sensors.motion.data &amp;&amp; sensors.motion.data.accelerationIncludingGravity ? sensors.motion.data.accelerationIncludingGravity : { <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">z</span>: <span class="hljs-number">0</span> };
+		<span class="hljs-keyword">var</span> screenAccGData = {};
+
+		<span class="hljs-keyword">switch</span> ( screenOrientationAngle ) {
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_90:
+				screenAccGData.x = - accGData.y;
+				screenAccGData.y =   accGData.x;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_180:
+				screenAccGData.x = - accGData.x;
+				screenAccGData.y = - accGData.y;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_270:
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_MINUS_90:
+				screenAccGData.x =   accGData.y;
+				screenAccGData.y = - accGData.x;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">default</span>: <span class="hljs-comment">// SCREEN_ROTATION_0</span>
+				screenAccGData.x =   accGData.x;
+				screenAccGData.y =   accGData.y;
+				<span class="hljs-keyword">break</span>;
+		}
+
+		screenAccGData.z = accGData.z;
+
+		<span class="hljs-keyword">return</span> screenAccGData;
+
+	},
+
+	<span class="hljs-attr">getScreenAdjustedRotationRate</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">var</span> rotRateData = sensors.motion.data &amp;&amp; sensors.motion.data.rotationRate ? sensors.motion.data.rotationRate : { <span class="hljs-attr">alpha</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">beta</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">gamma</span>: <span class="hljs-number">0</span> };
+		<span class="hljs-keyword">var</span> screenRotRateData = {};
+
+		<span class="hljs-keyword">switch</span> ( screenOrientationAngle ) {
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_90:
+				screenRotRateData.beta  = - rotRateData.gamma;
+				screenRotRateData.gamma =   rotRateData.beta;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_180:
+				screenRotRateData.beta  = - rotRateData.beta;
+				screenRotRateData.gamma = - rotRateData.gamma;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_270:
+			<span class="hljs-keyword">case</span> SCREEN_ROTATION_MINUS_90:
+				screenRotRateData.beta  =   rotRateData.gamma;
+				screenRotRateData.gamma = - rotRateData.beta;
+				<span class="hljs-keyword">break</span>;
+			<span class="hljs-keyword">default</span>: <span class="hljs-comment">// SCREEN_ROTATION_0</span>
+				screenRotRateData.beta  =   rotRateData.beta;
+				screenRotRateData.gamma =   rotRateData.gamma;
+				<span class="hljs-keyword">break</span>;
+		}
+
+		screenRotRateData.alpha = rotRateData.alpha;
+
+		<span class="hljs-keyword">return</span> screenRotRateData;
+
+	},
+
+	<span class="hljs-attr">getLastRawEventData</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+		<span class="hljs-keyword">return</span> sensors.motion.data || {};
+
+	},
+
+	<span class="hljs-attr">_accelerationXAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_accelerationYAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_accelerationZAvailable</span>: <span class="hljs-literal">false</span>,
+
+	<span class="hljs-attr">_accelerationIncludingGravityXAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_accelerationIncludingGravityYAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_accelerationIncludingGravityZAvailable</span>: <span class="hljs-literal">false</span>,
+
+	<span class="hljs-attr">_rotationRateAlphaAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_rotationRateBetaAvailable</span>: <span class="hljs-literal">false</span>,
+	<span class="hljs-attr">_rotationRateGammaAvailable</span>: <span class="hljs-literal">false</span>,
+
+	<span class="hljs-attr">isAvailable</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">_valueType</span>)</span>{
+
+		<span class="hljs-keyword">switch</span>(_valueType){
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ACCELERATION_X:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accelerationXAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ACCELERATION_Y:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accelerationYAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ACCELERATION_Z:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accelerationZAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ACCELERATION_INCLUDING_GRAVITY_X:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accelerationIncludingGravityXAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ACCELERATION_INCLUDING_GRAVITY_Y:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accelerationIncludingGravityYAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ACCELERATION_INCLUDING_GRAVITY_Z:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._accelerationIncludingGravityZAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ROTATION_RATE_ALPHA:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._rotationRateAlphaAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ROTATION_RATE_BETA:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._rotationRateBetaAvailable;
+
+			<span class="hljs-keyword">case</span> <span class="hljs-keyword">this</span>.ROTATION_RATE_GAMMA:
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._rotationRateGammaAvailable;
+		}
+	},
+
+	<span class="hljs-attr">ACCELERATION_X</span>: <span class="hljs-string">'accelerationX'</span>,
+	<span class="hljs-attr">ACCELERATION_Y</span>: <span class="hljs-string">'accelerationY'</span>,
+	<span class="hljs-attr">ACCELERATION_Z</span>: <span class="hljs-string">'accelerationZ'</span>,
+
+	<span class="hljs-attr">ACCELERATION_INCLUDING_GRAVITY_X</span>: <span class="hljs-string">'accelerationIncludingGravityX'</span>,
+	<span class="hljs-attr">ACCELERATION_INCLUDING_GRAVITY_Y</span>: <span class="hljs-string">'accelerationIncludingGravityY'</span>,
+	<span class="hljs-attr">ACCELERATION_INCLUDING_GRAVITY_Z</span>: <span class="hljs-string">'accelerationIncludingGravityZ'</span>,
+
+	<span class="hljs-attr">ROTATION_RATE_ALPHA</span>: <span class="hljs-string">'rotationRateAlpha'</span>,
+	<span class="hljs-attr">ROTATION_RATE_BETA</span>: <span class="hljs-string">'rotationRateBeta'</span>,
+	<span class="hljs-attr">ROTATION_RATE_GAMMA</span>: <span class="hljs-string">'rotationRateGamma'</span>
+
+};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>//// Attach FULLTILT to root DOM element //////</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-built_in">window</span>.FULLTILT = FULLTILT;
+
+})( <span class="hljs-built_in">window</span> );</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

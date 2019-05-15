@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render the app router 1`] = `
+<div
+  class="main"
+>
+  <nav>
+    <h1
+      class="logo text-center"
+    >
+      app_name
+    </h1>
+  </nav>
+  <main>
+    <div
+      class="container-fluid"
+    >
+      <div
+        data-testid="router"
+      />
+    </div>
+  </main>
+</div>
+`;

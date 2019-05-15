@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pulse should display a pulse animation 1`] = `
+<div
+  class="main la-ball-scale-pulse la-3x"
+  data-testid="pulse"
+>
+  <div />
+  <div />
+</div>
+`;

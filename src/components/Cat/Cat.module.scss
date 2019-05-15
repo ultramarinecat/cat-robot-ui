@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+////
+//// Cat styles
+////
+
+@import 'base.scss';
+
+.main {
+  max-width: rem(600);
+  position: relative;
+  @extend %center-block;
+}

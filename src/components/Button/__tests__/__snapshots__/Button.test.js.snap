@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should be disabled if \`disabed\` is true 1`] = `
+<button
+  class="main waves-effect waves-light disabled"
+  type="button"
+>
+  cat
+</button>
+`;
+
+exports[`Button should display a button with text 1`] = `
+<button
+  class="main waves-effect waves-light"
+  type="button"
+>
+  cat
+</button>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Particles should display particles effect 1`] = `
+<div
+  class="main"
+  data-testid="particles"
+  id="particles"
+/>
+`;

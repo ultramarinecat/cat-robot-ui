@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Turning sound should play a turning sound 1`] = `
+<audio
+  data-testid="turning-audio"
+>
+  <source
+    preload="auto"
+    src="/turningSound.mp3"
+  />
+</audio>
+`;

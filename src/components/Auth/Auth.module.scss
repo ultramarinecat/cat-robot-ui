@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+////
+//// Auth styles
+////
+
+@import 'base.scss';
+
+// login form
+.form {
+  max-width: rem(560);
+  @extend %center-block;
+}
+
+// login instructions
+.legend {
+  font-size: rem(18);
+  margin-bottom: rem(16);
+}
+
+// input labels
+.label.label {
+  @extend %align-right;
+  font-size: rem(14);
+  padding-right: rem(10);
+  padding-left: 0;
+  margin-top: rem(7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// form validation/login status
+.feedback {
+  @extend %align-left;
+  font-size: rem(15);
+  padding: rem(5) 0 rem(14) rem(18);
+  min-height: rem(41);
+  color: $validation-text-color;
+}
