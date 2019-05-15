@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+////
+//// Particles styles
+////
+
+@import 'base.scss';
+
+.main {
+  position: absolute;
+  width: $full-viewport-width;
+  height: $full-viewport-height;
+  overflow: hidden;
+  z-index: -1;
+}

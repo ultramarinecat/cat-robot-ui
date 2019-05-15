@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Auth.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="../App/App.html">
+                  src/components/App/App.js
+                </a>
+              
+                
+                <a class="source" href="../App/ErrorBoundary.html">
+                  src/components/App/ErrorBoundary.js
+                </a>
+              
+                
+                <a class="source" href="../App/i18n.html">
+                  src/components/App/i18n.js
+                </a>
+              
+                
+                <a class="source" href="Auth.html">
+                  src/components/Auth/Auth.js
+                </a>
+              
+                
+                <a class="source" href="AuthActions.html">
+                  src/components/Auth/AuthActions.js
+                </a>
+              
+                
+                <a class="source" href="AuthReducer.html">
+                  src/components/Auth/AuthReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Button/Button.html">
+                  src/components/Button/Button.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/Cat.html">
+                  src/components/Cat/Cat.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/CatActions.html">
+                  src/components/Cat/CatActions.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/CatReducer.html">
+                  src/components/Cat/CatReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/fulltilt.html">
+                  src/components/Cat/fulltilt.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/Connection.html">
+                  src/components/Connection/Connection.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionActions.html">
+                  src/components/Connection/ConnectionActions.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionReducer.html">
+                  src/components/Connection/ConnectionReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/messages.html">
+                  src/components/Connection/messages.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/Intro.html">
+                  src/components/Intro/Intro.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/IntroActions.html">
+                  src/components/Intro/IntroActions.js
+                </a>
+              
+                
+                <a class="source" href="../Particles/Particles.html">
+                  src/components/Particles/Particles.js
+                </a>
+              
+                
+                <a class="source" href="../Pulse/Pulse.html">
+                  src/components/Pulse/Pulse.js
+                </a>
+              
+                
+                <a class="source" href="../Router/Router.html">
+                  src/components/Router/Router.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/CatSound.html">
+                  src/components/Sound/CatSound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Mute.html">
+                  src/components/Sound/Mute.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Sound.html">
+                  src/components/Sound/Sound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/TurningSound.html">
+                  src/components/Sound/TurningSound.js
+                </a>
+              
+                
+                <a class="source" href="../Spinner/Spinner.html">
+                  src/components/Spinner/Spinner.js
+                </a>
+              
+                
+                <a class="source" href="../Typing/Typing.html">
+                  src/components/Typing/Typing.js
+                </a>
+              
+                
+                <a class="source" href="../../configureStore.html">
+                  src/configureStore.js
+                </a>
+              
+                
+                <a class="source" href="../../index.html">
+                  src/index.js
+                </a>
+              
+                
+                <a class="source" href="../../serviceWorker.html">
+                  src/serviceWorker.js
+                </a>
+              
+                
+                <a class="source" href="../../setupTests.html">
+                  src/setupTests.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>Auth.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>Auth component
+Manages authenticating and connecting to robot</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">import</span> React, { memo, useState, useEffect, useCallback, useReducer, useRef } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">'prop-types'</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-redux'</span>;
+
+<span class="hljs-keyword">import</span> { withTranslation } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-i18next'</span>;
+<span class="hljs-keyword">import</span> { isAlphanumeric, isByteLength } <span class="hljs-keyword">from</span> <span class="hljs-string">'validator'</span>;
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
+
+<span class="hljs-keyword">import</span> { connectToRobot } <span class="hljs-keyword">from</span> <span class="hljs-string">'./AuthActions.js'</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">'../Button/Button.js'</span>;
+<span class="hljs-keyword">import</span> Spinner <span class="hljs-keyword">from</span> <span class="hljs-string">'../Spinner/Spinner.js'</span>;
+
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./Auth.module.scss'</span>;
+
+<span class="hljs-keyword">const</span> CONNECTION_START = <span class="hljs-string">'CONNECTION_START'</span>;
+<span class="hljs-keyword">const</span> CONNECTION_FAILED = <span class="hljs-string">'CONNECTION_FAILED'</span>;
+<span class="hljs-keyword">const</span> INPUT_CHANGED = <span class="hljs-string">'INPUT_CHANGED'</span>;
+<span class="hljs-keyword">const</span> INPUT_INVALID_ON_SUBMIT = <span class="hljs-string">'SUBMIT_INPUT_INVALID'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> MIN_KEY_LENGTH = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> MAX_KEY_LENGTH = <span class="hljs-number">16</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Auth</span>(<span class="hljs-params">{
+  connecting,
+  connectionTimedOut,
+  connectionConflict,
+  authFailed,
+  connectToRobot,
+  t
+}</span>) </span>{
+  <span class="hljs-keyword">const</span> startValidating = useRef(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">const</span> [catKey, setCatKey] = useState(<span class="hljs-string">''</span>);
+
+  <span class="hljs-keyword">const</span> [
+    { disableInput, disableButton, displaySpinner, feedback },
+    dispatch
+  ] = useReducer(authReducer, {
+    <span class="hljs-attr">disableInput</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">disableButton</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">displaySpinner</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">feedback</span>: <span class="hljs-string">''</span>
+  });
+
+  <span class="hljs-keyword">const</span> handleInputChange = useCallback(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> catKeyValue = event.target.value.trim();
+
+    setCatKey(catKeyValue);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>don’t start validating until inital submit</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (!startValidating.current) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    dispatch({
+      <span class="hljs-attr">type</span>: INPUT_CHANGED,
+      <span class="hljs-attr">isValid</span>: isValidKey(catKeyValue),
+      <span class="hljs-attr">feedback</span>: t(<span class="hljs-string">'auth_validation_cat_key'</span>)
+    });
+  });
+
+  <span class="hljs-keyword">const</span> handleInputKeyPress = useCallback(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>handle enter as submit click</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span> (event.charCode === <span class="hljs-number">13</span>) {
+      handleSubmit(event);
+    }
+  });
+
+  <span class="hljs-keyword">const</span> handleSubmit = useCallback(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+    event.preventDefault();
+    startValidating.current = <span class="hljs-literal">true</span>;
+
+    <span class="hljs-keyword">if</span> (!isValidKey(catKey)) {
+      dispatch({
+        <span class="hljs-attr">type</span>: INPUT_INVALID_ON_SUBMIT,
+        <span class="hljs-attr">feedback</span>: t(<span class="hljs-string">'auth_validation_cat_key'</span>)
+      });
+
+      <span class="hljs-keyword">return</span>;
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>if input valid, attempt to connect</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    dispatch({
+      <span class="hljs-attr">type</span>: CONNECTION_START
+    });
+
+    connectToRobot(catKey);
+  });
+
+  useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">if</span> (authFailed) {
+      dispatch({
+        <span class="hljs-attr">type</span>: CONNECTION_FAILED,
+        <span class="hljs-attr">feedback</span>: t(<span class="hljs-string">'auth_invalid'</span>)
+      });
+
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (connectionTimedOut) {
+      dispatch({
+        <span class="hljs-attr">type</span>: CONNECTION_FAILED,
+        <span class="hljs-attr">feedback</span>: t(<span class="hljs-string">'auth_connection_failed'</span>)
+      });
+
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (connectionConflict) {
+      dispatch({
+        <span class="hljs-attr">type</span>: CONNECTION_FAILED,
+        <span class="hljs-attr">feedback</span>: t(<span class="hljs-string">'auth_connection_conflict'</span>)
+      });
+    }
+  }, [connecting, connectionTimedOut, connectionConflict, authFailed]);
+
+  <span class="hljs-keyword">const</span> labelClasses = classNames(styles.label, <span class="hljs-string">'col-sm-2'</span>, <span class="hljs-string">'d-none'</span>, <span class="hljs-string">'d-sm-block'</span>);
+  <span class="hljs-keyword">const</span> feedbackClasses = classNames(
+    styles.feedback,
+    { <span class="hljs-attr">invisible</span>: !feedback },
+    <span class="hljs-string">'col-sm-10'</span>,
+    <span class="hljs-string">'offset-sm-2'</span>
+  );
+
+  <span class="hljs-keyword">return</span> (
+    &lt;div className={styles.main}&gt;
+      &lt;form className={styles.form} noValidate&gt;
+        &lt;fieldset&gt;
+          &lt;legend className={styles.legend}&gt;{t('auth_instructions')}&lt;/legend&gt;
+          &lt;div className="row"&gt;
+            &lt;label className={labelClasses} htmlFor="cat-key"&gt;
+              {t('auth_cat_key')}
+            &lt;/label&gt;
+            &lt;div className="col-sm-10"&gt;
+              &lt;input
+                className="form-control"
+                type="text"
+                value={catKey}
+                disabled={disableInput}
+                onChange={handleInputChange}
+                onKeyPress={handleInputKeyPress}
+                id="cat-key"
+                name="cat-key"
+                placeholder={t('auth_placeholder')}
+                required
+              /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/fieldset&gt;
+
+        &lt;div className="row"&gt;
+          &lt;div className={feedbackClasses} data-testid="feedback"&gt;
+            {feedback}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+          &lt;Button
+            text={t('auth_connect')}
+            disabled={disableButton}
+            onClick={handleSubmit}
+            data-testid="button"
+          /&gt;
+          &lt;Spinner spinning={displaySpinner} data-testid="spinner" /&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  );
+}
+
+export function authReducer(state, action) {
+  switch (action.type) {
+    case CONNECTION_START: {
+      return {
+        ...state,
+        displaySpinner: true,
+        disableButton: true,
+        disableInput: true,
+        feedback: ''
+      };
+    }
+    case CONNECTION_FAILED: {
+      const { feedback } = action;
+      return {
+        ...state,
+        displaySpinner: false,
+        disableButton: false,
+        disableInput: false,
+        feedback
+      };
+    }
+    case INPUT_CHANGED:
+      const { isValid, feedback } = action;
+      return {
+        ...state,
+        disableButton: !isValid,
+        feedback: !isValid ? feedback : ''
+      };
+    case INPUT_INVALID_ON_SUBMIT: {
+      const { feedback } = action;
+      return {
+        ...state,
+        disableButton: true,
+        feedback
+      };
+    }
+    default:
+      return state;
+  }
+}
+
+function isValidKey(key) {
+  return (
+    isByteLength(key, { min: MIN_KEY_LENGTH, max: MAX_KEY_LENGTH }) &amp;&amp; isAlphanumeric(key)
+  );
+}
+
+Auth.propTypes = {
+  connecting: PropTypes.bool,
+  connectionTimedOut: PropTypes.bool,
+  connectionConflict: PropTypes.bool,
+  authFailed: PropTypes.bool,
+  connectToRobot: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state =&gt; {
+  return {
+    connecting: state.auth.connecting,
+    connectionTimedOut: state.auth.connectionTimedOut,
+    connectionConflict: state.auth.connectionConflict,
+    authFailed: state.auth.authFailed
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { connectToRobot }
+)(memo(withTranslation()(Auth)));</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

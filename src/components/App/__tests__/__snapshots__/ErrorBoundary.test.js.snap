@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary should display fallback ui when an error is thrown by a descendant component 1`] = `
+<div
+  class="main"
+  data-testid="error-fallback-ui"
+>
+  error
+</div>
+`;
+
+exports[`ErrorBoundary should render children when an error is not thrown by a descendant component 1`] = `
+<div>
+  cat
+</div>
+`;

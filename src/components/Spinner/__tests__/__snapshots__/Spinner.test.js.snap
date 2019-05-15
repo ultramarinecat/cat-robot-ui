@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should display a spinner 1`] = `
+<div
+  class="main la-ball-clip-rotate la-sm"
+  data-testid="spinner"
+>
+  <div />
+</div>
+`;
+
+exports[`Spinner should not display a spinner when \`spinning\` is false 1`] = `
+<div
+  class="main invisible la-ball-clip-rotate la-sm"
+  data-testid="spinner"
+>
+  <div />
+</div>
+`;

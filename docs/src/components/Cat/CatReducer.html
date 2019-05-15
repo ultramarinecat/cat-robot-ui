@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>CatReducer.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="../App/App.html">
+                  src/components/App/App.js
+                </a>
+              
+                
+                <a class="source" href="../App/ErrorBoundary.html">
+                  src/components/App/ErrorBoundary.js
+                </a>
+              
+                
+                <a class="source" href="../App/i18n.html">
+                  src/components/App/i18n.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/Auth.html">
+                  src/components/Auth/Auth.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthActions.html">
+                  src/components/Auth/AuthActions.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthReducer.html">
+                  src/components/Auth/AuthReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Button/Button.html">
+                  src/components/Button/Button.js
+                </a>
+              
+                
+                <a class="source" href="Cat.html">
+                  src/components/Cat/Cat.js
+                </a>
+              
+                
+                <a class="source" href="CatActions.html">
+                  src/components/Cat/CatActions.js
+                </a>
+              
+                
+                <a class="source" href="CatReducer.html">
+                  src/components/Cat/CatReducer.js
+                </a>
+              
+                
+                <a class="source" href="fulltilt.html">
+                  src/components/Cat/fulltilt.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/Connection.html">
+                  src/components/Connection/Connection.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionActions.html">
+                  src/components/Connection/ConnectionActions.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionReducer.html">
+                  src/components/Connection/ConnectionReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/messages.html">
+                  src/components/Connection/messages.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/Intro.html">
+                  src/components/Intro/Intro.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/IntroActions.html">
+                  src/components/Intro/IntroActions.js
+                </a>
+              
+                
+                <a class="source" href="../Particles/Particles.html">
+                  src/components/Particles/Particles.js
+                </a>
+              
+                
+                <a class="source" href="../Pulse/Pulse.html">
+                  src/components/Pulse/Pulse.js
+                </a>
+              
+                
+                <a class="source" href="../Router/Router.html">
+                  src/components/Router/Router.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/CatSound.html">
+                  src/components/Sound/CatSound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Mute.html">
+                  src/components/Sound/Mute.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Sound.html">
+                  src/components/Sound/Sound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/TurningSound.html">
+                  src/components/Sound/TurningSound.js
+                </a>
+              
+                
+                <a class="source" href="../Spinner/Spinner.html">
+                  src/components/Spinner/Spinner.js
+                </a>
+              
+                
+                <a class="source" href="../Typing/Typing.html">
+                  src/components/Typing/Typing.js
+                </a>
+              
+                
+                <a class="source" href="../../configureStore.html">
+                  src/configureStore.js
+                </a>
+              
+                
+                <a class="source" href="../../index.html">
+                  src/index.js
+                </a>
+              
+                
+                <a class="source" href="../../serviceWorker.html">
+                  src/serviceWorker.js
+                </a>
+              
+                
+                <a class="source" href="../../setupTests.html">
+                  src/setupTests.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>CatReducer.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>Cat reducer</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">import</span> {
+  CAT_DETECTED,
+  ROBOT_CURRENTLY_TURNING,
+  ROBOT_TURNING_LEFT,
+  ROBOT_TURNING_RIGHT,
+  ROBOT_COMPLETED_TURN,
+  CONNECTION_SUCCESSFUL,
+  CLEAR_CAT_DETECTED,
+  DISCONNECTED
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'../Connection/ConnectionActions.js'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">connectionReducer</span>(<span class="hljs-params">state = {}, action</span>) </span>{
+  <span class="hljs-keyword">switch</span> (action.type) {
+    <span class="hljs-keyword">case</span> ROBOT_CURRENTLY_TURNING:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">robotCurrentlyTurning</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">robotTurningLeft</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotTurningRight</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCompletedTurn</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">catDetected</span>: <span class="hljs-literal">false</span>
+        }
+      };
+    <span class="hljs-keyword">case</span> ROBOT_TURNING_LEFT:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">robotTurningLeft</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">robotTurningRight</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCompletedTurn</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCurrentlyTurning</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">catDetected</span>: <span class="hljs-literal">false</span>
+        }
+      };
+    <span class="hljs-keyword">case</span> ROBOT_TURNING_RIGHT:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">robotTurningRight</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">robotTurningLeft</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCompletedTurn</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCurrentlyTurning</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">catDetected</span>: <span class="hljs-literal">false</span>
+        }
+      };
+    <span class="hljs-keyword">case</span> ROBOT_COMPLETED_TURN:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">robotCompletedTurn</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">robotTurningLeft</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotTurningRight</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCurrentlyTurning</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">catDetected</span>: <span class="hljs-literal">false</span>
+        }
+      };
+    <span class="hljs-keyword">case</span> CAT_DETECTED:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">catDetected</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">robotTurningLeft</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotTurningRight</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCompletedTurn</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">robotCurrentlyTurning</span>: <span class="hljs-literal">false</span>
+        }
+      };
+    <span class="hljs-keyword">case</span> CLEAR_CAT_DETECTED:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">catDetected</span>: <span class="hljs-literal">false</span>
+        }
+      };
+    <span class="hljs-keyword">case</span> CONNECTION_SUCCESSFUL:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">disconnected</span>: <span class="hljs-literal">false</span>
+        }
+      };
+    <span class="hljs-keyword">case</span> DISCONNECTED:
+      <span class="hljs-keyword">return</span> {
+        ...state,
+        ...{
+          <span class="hljs-attr">disconnected</span>: <span class="hljs-literal">true</span>
+        }
+      };
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-keyword">return</span> state;
+  }
+}</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

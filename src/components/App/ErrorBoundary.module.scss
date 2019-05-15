@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+////
+//// Error boundary styles
+////
+
+@import 'base.scss';
+
+.main {
+  position: absolute;
+  top: $half-parent-height;
+  left: $half-parent-width;
+  transform: translate(-$half-parent-width, -$half-parent-height);
+  width: $full-parent-width;
+  @extend %center-inline;
+
+  padding: rem(15);
+  font-size: rem(18);
+
+  @media #{$tablet-plus} {
+    font-size: rem(20);
+  }
+}

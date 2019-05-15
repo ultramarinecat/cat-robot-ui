@@ -1,0 +1,23 @@
+{
+  "app_name": "Cat Robot",
+  "app_description": "A roaming Arduino bot powered by Javascript!",
+  "get_started": "Get Started",
+  "auth_instructions": "Please enter your cat key:",
+  "auth_cat_key": "Cat Key",
+  "auth_placeholder": "meow...",
+  "auth_validation_cat_key": "Please enter valid cat key",
+  "auth_connect": "Connect!",
+  "auth_connecting": "Connecting...",
+  "auth_invalid": "Could not to authenticate with cat key",
+  "auth_connection_failed": "Could not connect to robot",
+  "auth_connection_conflict": "Robot already has active connection",
+  "connected": "Connected",
+  "disconnected": "Disconnected...",
+  "turning_left": "Turning Left",
+  "turning_right": "Turning Right",
+  "turn_completed": "Connected...",
+  "currently_turning": "Navigating obstacle...",
+  "cat_detected": "Cat detected!!!",
+  "device_not_supported": "Please use on your mobile device",
+  "error": "Something went wrong"
+}

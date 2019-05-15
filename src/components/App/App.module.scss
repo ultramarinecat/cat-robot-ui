@@ -1,0 +1,70 @@
+@charset 'utf-8';
+
+////
+//// App styles
+////
+
+@import 'base.scss';
+
+$background-color: $indigo-500;
+$background-image: 'url(./cat.jpg)';
+
+html {
+  // height, width 100%;
+  width: $full-parent-width;
+  height: $full-parent-height;
+  overflow: hidden;
+
+  // smooth fonts on chrome, mobile safari
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  // full-page background image
+  background: #{$background-image} $background-color no-repeat center center fixed;
+  background-size: cover;
+
+  width: $full-parent-width;
+  height: $full-parent-height;
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  // center content vertically and horizontally
+  position: absolute;
+  top: $half-parent-height;
+  left: $half-parent-width;
+  transform: translate(-$half-parent-width, -$half-parent-height);
+
+  width: $full-parent-width;
+  @extend %center-block;
+  @extend %center-inline;
+}
+
+.logo {
+  font-family: $logo-font;
+  font-style: italic;
+
+  font-size: rem(54.4);
+  font-weight: 700;
+
+  @media #{$tablet-plus} {
+    font-size: rem(60.8);
+  }
+
+  padding-top: 10vh;
+  text-shadow: rem(1) rem(6) rem(3) rgba(#000, 0.1);
+  // text-shadow: rem(1.6) rem(8) rem(2.6) rgba(#000, 0.12);
+}
+
+// selection color
+::-moz-selection {
+  background: $selection-background-color;
+  text-shadow: none;
+}
+
+::selection {
+  background: $selection-background-color;
+  text-shadow: none;
+}

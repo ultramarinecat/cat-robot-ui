@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+////
+//// Mute button styles
+////
+
+@import 'base.scss';
+
+.main {
+  font-size: rem(18);
+  position: absolute;
+  right: rem(5);
+  bottom: rem(-35);
+}

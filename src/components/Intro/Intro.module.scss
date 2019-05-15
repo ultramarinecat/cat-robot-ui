@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+////
+//// Intro styles
+////
+
+@import 'base.scss';
+
+.description {
+  font-size: rem(28.8);
+  line-height: 1.25;
+  margin-bottom: rem(26);
+  @media #{$tablet-plus} {
+    font-size: rem(32);
+  }
+}

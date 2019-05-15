@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+////
+//// Typing styles
+////
+
+@import 'base.scss';
+
+.main {
+  margin-top: rem(66);
+  font-size: rem(25);
+  min-height: rem(37);
+  @media #{$tablet-plus} {
+    margin-top: rem(105);
+    font-size: rem(28);
+    min-height: rem(42);
+  }
+}

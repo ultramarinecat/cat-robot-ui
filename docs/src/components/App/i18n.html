@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>i18n.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page_wrapper">
+            <div id="jump_page">
+              
+                
+                <a class="source" href="App.html">
+                  src/components/App/App.js
+                </a>
+              
+                
+                <a class="source" href="ErrorBoundary.html">
+                  src/components/App/ErrorBoundary.js
+                </a>
+              
+                
+                <a class="source" href="i18n.html">
+                  src/components/App/i18n.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/Auth.html">
+                  src/components/Auth/Auth.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthActions.html">
+                  src/components/Auth/AuthActions.js
+                </a>
+              
+                
+                <a class="source" href="../Auth/AuthReducer.html">
+                  src/components/Auth/AuthReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Button/Button.html">
+                  src/components/Button/Button.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/Cat.html">
+                  src/components/Cat/Cat.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/CatActions.html">
+                  src/components/Cat/CatActions.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/CatReducer.html">
+                  src/components/Cat/CatReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Cat/fulltilt.html">
+                  src/components/Cat/fulltilt.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/Connection.html">
+                  src/components/Connection/Connection.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionActions.html">
+                  src/components/Connection/ConnectionActions.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/ConnectionReducer.html">
+                  src/components/Connection/ConnectionReducer.js
+                </a>
+              
+                
+                <a class="source" href="../Connection/messages.html">
+                  src/components/Connection/messages.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/Intro.html">
+                  src/components/Intro/Intro.js
+                </a>
+              
+                
+                <a class="source" href="../Intro/IntroActions.html">
+                  src/components/Intro/IntroActions.js
+                </a>
+              
+                
+                <a class="source" href="../Particles/Particles.html">
+                  src/components/Particles/Particles.js
+                </a>
+              
+                
+                <a class="source" href="../Pulse/Pulse.html">
+                  src/components/Pulse/Pulse.js
+                </a>
+              
+                
+                <a class="source" href="../Router/Router.html">
+                  src/components/Router/Router.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/CatSound.html">
+                  src/components/Sound/CatSound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Mute.html">
+                  src/components/Sound/Mute.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/Sound.html">
+                  src/components/Sound/Sound.js
+                </a>
+              
+                
+                <a class="source" href="../Sound/TurningSound.html">
+                  src/components/Sound/TurningSound.js
+                </a>
+              
+                
+                <a class="source" href="../Spinner/Spinner.html">
+                  src/components/Spinner/Spinner.js
+                </a>
+              
+                
+                <a class="source" href="../Typing/Typing.html">
+                  src/components/Typing/Typing.js
+                </a>
+              
+                
+                <a class="source" href="../../configureStore.html">
+                  src/configureStore.js
+                </a>
+              
+                
+                <a class="source" href="../../index.html">
+                  src/index.js
+                </a>
+              
+                
+                <a class="source" href="../../serviceWorker.html">
+                  src/serviceWorker.js
+                </a>
+              
+                
+                <a class="source" href="../../setupTests.html">
+                  src/setupTests.js
+                </a>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>i18n.js</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>i18n
+Configures i18n, adds en and es translations</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>
+<span class="hljs-keyword">import</span> i18n <span class="hljs-keyword">from</span> <span class="hljs-string">'i18next'</span>;
+<span class="hljs-keyword">import</span> LanguageDetector <span class="hljs-keyword">from</span> <span class="hljs-string">'i18next-browser-languagedetector'</span>;
+<span class="hljs-keyword">import</span> { initReactI18next } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-i18next'</span>;
+
+<span class="hljs-keyword">import</span> en <span class="hljs-keyword">from</span> <span class="hljs-string">'./locales/en/common.json'</span>;
+<span class="hljs-keyword">import</span> es <span class="hljs-keyword">from</span> <span class="hljs-string">'./locales/es/common.json'</span>;
+
+i18n
+  .use(LanguageDetector) <span class="hljs-comment">// detect language</span>
+  .use(initReactI18next)
+  .init({
+    <span class="hljs-attr">resources</span>: { <span class="hljs-attr">cat</span>: <span class="hljs-string">'meow'</span> }, <span class="hljs-comment">// (needs to initialize with a resource)</span>
+    fallbackLng: <span class="hljs-string">'en'</span>, <span class="hljs-comment">// default lang</span>
+    keySeparator: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">interpolation</span>: {
+      <span class="hljs-attr">escapeValue</span>: <span class="hljs-literal">false</span>
+    }
+  });</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>add english and spanish translations</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>i18n.addResources(<span class="hljs-string">'en'</span>, <span class="hljs-string">'translation'</span>, en);
+i18n.addResources(<span class="hljs-string">'es'</span>, <span class="hljs-string">'translation'</span>, es);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> i18n;</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

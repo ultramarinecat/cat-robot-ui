@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+////
+//// Pulse styles
+////
+
+@import 'base.scss';
+
+.main {
+  @extend %center-block;
+}

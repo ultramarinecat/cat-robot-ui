@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Auth should disable the button and display invalid key feedback if the key is invalid
+      when the button is clicked 1`] = `
+<div
+  class="main waves-effect waves-light"
+>
+  <form
+    class="form"
+    novalidate=""
+  >
+    <fieldset>
+      <legend
+        class="legend"
+      >
+        auth_instructions
+      </legend>
+      <div
+        class="row"
+      >
+        <label
+          class="label col-sm-2 d-none d-sm-block"
+          for="cat-key"
+        >
+          auth_cat_key
+        </label>
+        <div
+          class="col-sm-10"
+        >
+          <input
+            class="form-control"
+            id="cat-key"
+            name="cat-key"
+            placeholder="auth_placeholder"
+            required=""
+            type="text"
+            value="cat_"
+          />
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="row"
+    >
+      <div
+        class="feedback col-sm-10 offset-sm-2"
+        data-testid="feedback"
+      >
+        auth_validation_cat_key
+      </div>
+    </div>
+    <div>
+      <button
+        class="main waves-effect waves-light disabled"
+        type="button"
+      >
+        auth_connect
+      </button>
+      <div
+        class="main invisible la-ball-clip-rotate la-sm waves-effect waves-light"
+        data-testid="spinner"
+      >
+        <div />
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth should display a text field and a connect button 1`] = `
+<div
+  class="main waves-effect waves-light"
+>
+  <form
+    class="form"
+    novalidate=""
+  >
+    <fieldset>
+      <legend
+        class="legend"
+      >
+        auth_instructions
+      </legend>
+      <div
+        class="row"
+      >
+        <label
+          class="label col-sm-2 d-none d-sm-block"
+          for="cat-key"
+        >
+          auth_cat_key
+        </label>
+        <div
+          class="col-sm-10"
+        >
+          <input
+            class="form-control"
+            id="cat-key"
+            name="cat-key"
+            placeholder="auth_placeholder"
+            required=""
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="row"
+    >
+      <div
+        class="feedback invisible col-sm-10 offset-sm-2"
+        data-testid="feedback"
+      />
+    </div>
+    <div>
+      <button
+        class="main waves-effect waves-light"
+        type="button"
+      >
+        auth_connect
+      </button>
+      <div
+        class="main invisible la-ball-clip-rotate la-sm waves-effect waves-light"
+        data-testid="spinner"
+      >
+        <div />
+      </div>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Auth should initially not disable the input, disable the button, display a spinner,
+      or display feedback 1`] = `
+<div
+  class="main waves-effect waves-light"
+>
+  <form
+    class="form"
+    novalidate=""
+  >
+    <fieldset>
+      <legend
+        class="legend"
+      >
+        auth_instructions
+      </legend>
+      <div
+        class="row"
+      >
+        <label
+          class="label col-sm-2 d-none d-sm-block"
+          for="cat-key"
+        >
+          auth_cat_key
+        </label>
+        <div
+          class="col-sm-10"
+        >
+          <input
+            class="form-control"
+            id="cat-key"
+            name="cat-key"
+            placeholder="auth_placeholder"
+            required=""
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </fieldset>
+    <div
+      class="row"
+    >
+      <div
+        class="feedback invisible col-sm-10 offset-sm-2"
+        data-testid="feedback"
+      />
+    </div>
+    <div>
+      <button
+        class="main waves-effect waves-light"
+        type="button"
+      >
+        auth_connect
+      </button>
+      <div
+        class="main invisible la-ball-clip-rotate la-sm waves-effect waves-light"
+        data-testid="spinner"
+      >
+        <div />
+      </div>
+    </div>
+  </form>
+</div>
+`;

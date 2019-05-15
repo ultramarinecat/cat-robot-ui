@@ -1,0 +1,78 @@
+@charset 'utf-8';
+
+////
+//// Button styles
+////
+
+@import 'base.scss';
+
+$button-color: $indigo-400;
+$button-color-hover: lighten($button-color, 5%);
+$button-color-disabled: darken($button-color, 15%);
+
+$button-font-size: rem(18.56);
+$button-font-size-tablet: rem(19.2);
+
+$button-height: rem(46);
+$button-height-tablet: rem(50);
+
+$button-border-radius: 2px;
+
+$button-padding: rem(35.2);
+$button-letter-spacing: rem(0.576);
+
+$button-transition-delay: 0.5s;
+$button-transition-timing-function: ease-out;
+
+.main,
+%button {
+  background-color: $button-color;
+  color: $text-color;
+
+  height: $button-height;
+  font-size: $button-font-size;
+  text-transform: uppercase;
+
+  @extend %z1;
+
+  border: none;
+  border-radius: $button-border-radius;
+  display: inline-block;
+  outline: 0;
+  padding: 0 $button-padding;
+  text-decoration: none;
+  letter-spacing: $button-letter-spacing;
+  transition: $button-transition-delay $button-transition-timing-function;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background-color: $button-color-hover;
+    @extend %z2;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  @media #{$tablet-plus} {
+    height: $button-height-tablet;
+    font-size: $button-font-size-tablet;
+  }
+}
+
+.disabled,
+%button-disabled {
+  background-color: $button-color-disabled;
+  color: $button-text-color-disabled;
+
+  box-shadow: none;
+  cursor: default;
+  pointer-events: none;
+
+  &:hover {
+    background-color: $button-color-disabled;
+    color: $button-text-color-disabled;
+  }
+}

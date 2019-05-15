@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "extends": ["react-app", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "one-var": [2, "never"],
+    "no-unused-vars": [1, {
+      "argsIgnorePattern": "^reject$"
+      }],
+    "func-names": 2,
+    "func-style": [2, "declaration", {
+      "allowArrowFunctions": true
+    }],
+    "max-len": [2, {
+      "code": 90,
+      "tabWidth": 2,
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreRegExpLiterals": true
+    }],
+    "prettier/prettier": "error"
+  }
+}

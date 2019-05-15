@@ -1,0 +1,16 @@
+////
+//// Breakpoints
+////
+
+// https://getbootstrap.com/docs/4.3/layout/overview/#responsive-breakpoints
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px
+);
+
+$max-phone-width: #{map-get($grid-breakpoints, sm)};
+$max-tablet-width: #{map-get($grid-breakpoints, md)};
+
+// media queries
+$tablet-plus: 'only screen and (min-width: #{$max-phone-width}) and (min-height: #{$max-phone-width})';
+$laptop-plus: 'only screen and (min-width: #{$max-tablet-width}) and (min-height: #{$max-tablet-width})';

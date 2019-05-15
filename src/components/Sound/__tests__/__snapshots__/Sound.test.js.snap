@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sound should play cat and turning sounds and display mute button 1`] = `
+<div
+  data-testid="cat-audio"
+/>
+`;

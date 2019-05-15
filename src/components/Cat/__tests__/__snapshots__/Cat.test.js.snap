@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cat should display status text and sounds 1`] = `
+<div
+  class="main"
+>
+  <div
+    data-testid="status"
+  >
+    connected
+  </div>
+  <div
+    data-testid="sound"
+  />
+</div>
+`;

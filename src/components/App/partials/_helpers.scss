@@ -1,0 +1,68 @@
+////
+//// Helpers
+////
+
+.center-inline,
+%center-inline {
+  text-align: center;
+}
+
+.center-block,
+%center-block {
+  margin: 0 auto;
+}
+
+.align-left,
+%align-left {
+  text-align: left;
+}
+
+.align-right,
+%align-right {
+  text-align: right;
+}
+
+.clear,
+%clear {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+// px to rem
+@function rem($px) {
+  @return ($px / 16) * 1rem; // (assuming 16px default font-size)
+}
+
+// z depth shadow (http://materializecss.com/shadow.html)
+$z-depth1-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$z-depth2-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+$z-depth3-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$z-depth4-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+$z-depth5-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+
+// box shadows
+.z0,
+%z0 {
+  box-shadow: none;
+}
+.z1,
+%z1 {
+  box-shadow: $z-depth1-shadow;
+}
+.z2,
+%z2 {
+  box-shadow: $z-depth2-shadow;
+}
+.z3,
+%z3 {
+  box-shadow: $z-depth3-shadow;
+}
+.z4,
+%z4 {
+  box-shadow: $z-depth4-shadow;
+}
+.z5,
+%z5 {
+  box-shadow: $z-depth5-shadow;
+}
